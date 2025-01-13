@@ -2,7 +2,7 @@ import React from 'react'
 
 const Test = () => {
   return (
-    <div>Checking test okk</div>
+    <div>collboration is almost ok</div>
   )
 }
 
