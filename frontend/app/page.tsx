@@ -1,6 +1,6 @@
-import Link from "next/link";
+// import Link from "next/link";
 
-Link;
+// Link;
 export default function Home() {
   return <div>Project starts now....</div>;
 }
