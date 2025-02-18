@@ -2,5 +2,11 @@
 
 // Link;
 export default function Home() {
-  return <div>Project starts now....</div>;
+ 
+  return (
+    <div className="pl-[16.5%]">
+      Project starts now....
+    </div>
+  );
+ 
 }

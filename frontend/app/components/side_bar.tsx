@@ -3,6 +3,7 @@ import { CgSearch } from "react-icons/cg";
 import { MdOutlineExplore } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa";
 import { RiMessengerLine } from "react-icons/ri";
+import { SiInstagram } from "react-icons/si";
 import Link from 'next/link'
 
 const menuItems = [
@@ -19,8 +20,9 @@ const menuItems = [
 
 const Sidebar = () => {
   return (
-    <div className="h-screen w-[16.5%] border-r border-[#2e2e2e]">
-      <h2 className="font-bold px-6 pt-9 text-[1.35rem] inline-block tracking-tight scale-x-90 scale-y-125">𝒫𝒾𝓍𝒶𝑔𝓇𝒶𝓂</h2>
+    <div className="fixed h-screen w-20 md:w-[5rem] lg:w-[16.5%] hidden md:block border-r border-[#2e2e2e]">
+      <h2 className="font-bold px-6 pt-9 text-[1.35rem] tracking-tight scale-x-90 scale-y-125 hidden lg:block">𝒫𝒾𝓍𝒶𝑔𝓇𝒶𝓂</h2>
+      <SiInstagram size={25} className="hidden md:block lg:hidden mx-7 mt-9 text-white"/>
       <div className="px-3 pt-10">
         {menuItems.map(({ icon, label, isImg, href }, index) => (
           <Link href={href}>
@@ -33,7 +35,7 @@ const Sidebar = () => {
               ) : (
                 icon
               )}
-              <p className="text-base">{label}</p>
+              <p className="text-base hidden lg:block">{label}</p>
             </div>
           </Link>
         ))}

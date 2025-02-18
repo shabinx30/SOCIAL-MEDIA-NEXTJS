@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 };
 
 //side bar
-// import Sidebar from "./components/side_bar";
+import Sidebar from "./components/side_bar";
 
 export default function RootLayout({
   children,
@@ -31,7 +31,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="flex">
-          {/* <Sidebar /> */}
+          <Sidebar />
           {children}
         </div>
       </body>
