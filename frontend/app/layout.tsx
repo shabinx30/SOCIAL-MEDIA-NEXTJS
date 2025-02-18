@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   description: "Pixagram is a social media plateform.",
 };
 
+//side bar
+import Sidebar from "./components/side_bar";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -27,7 +30,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div className="flex">
+          <Sidebar />
+          {children}
+        </div>
       </body>
     </html>
   );
