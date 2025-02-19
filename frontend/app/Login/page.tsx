@@ -3,8 +3,8 @@ import { FaFacebook } from "react-icons/fa";
 
 const Page = () => {
   return (
-    <div className="flex justify-center mt-8 w-screen">
-  <div className="flex flex-col items-center gap-2">
+    <div className="flex flex-col items-center mt-8 ">
+  <div className="flex flex-col gap-2">
     <div className="w-80 h-96 border border-gray-500 flex flex-col gap-7 items-center rounded">
       <h2 className="font-bold text-4xl inline-block tracking-tight scale-x-90 scale-y-125 p-6">
         𝒫𝒾𝓍𝒶𝑔𝓇𝒶𝓂
