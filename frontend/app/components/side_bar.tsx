@@ -42,9 +42,11 @@ const Sidebar = () => {
     <>
       {/* Sidebar */}
       <div className="fixed h-screen w-20 md:w-[5rem] lg:w-[15.3em] hidden md:block border-r border-[#2e2e2e]">
-        <h2 className="font-bold px-6 pt-9 text-[1.35rem] tracking-tight scale-x-90 scale-y-125 hidden lg:block">
-          𝒫𝒾𝓍𝒶𝑔𝓇𝒶𝓂
-        </h2>
+        <Link href={'/'}>
+          <h2 className="select-none font-bold px-6 pt-9 text-[1.35rem] tracking-tight scale-x-90 scale-y-125 hidden lg:block">
+            𝒫𝒾𝓍𝒶𝑔𝓇𝒶𝓂
+          </h2>
+        </Link>
         <SiInstagram size={25} className="hidden md:block lg:hidden mx-7 mt-11 text-white" />
         <div className="px-3 pt-10">
           {menuItems.map(({ icon, label, isImg, href }, index) => (

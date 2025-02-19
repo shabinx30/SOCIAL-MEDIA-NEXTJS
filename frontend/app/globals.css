@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  ::selection {
+    background-color: #FF3040; /* Your desired selection color */
+    color: white;
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #000000;
