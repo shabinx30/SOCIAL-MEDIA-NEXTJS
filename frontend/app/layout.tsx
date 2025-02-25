@@ -17,8 +17,8 @@ export const metadata: Metadata = {
   description: "Pixagram is a social media plateform.",
 };
 
-//side bar
-import Sidebar from "./components/side_bar";
+//cheking the route
+import RouteChecker from "./components/route_checker";
 
 export default function RootLayout({
   children,
@@ -30,10 +30,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Sidebar />
-        <div className="pl-2 md:pl-[6rem] lg:pl-[15.3em]">
+        <RouteChecker>
           {children}
-        </div>
+        </RouteChecker>
       </body>
     </html>
   );
