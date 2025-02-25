@@ -41,7 +41,7 @@ const Sidebar = () => {
   return (
     <>
       {/* Sidebar */}
-      <div className="fixed h-screen w-20 md:w-[5rem] lg:w-[15.3em] hidden md:block border-r border-[#2e2e2e]">
+      <div className="fixed h-screen w-20 md:w-[5rem] lg:w-[15.3em] bg-white dark:bg-black hidden md:block border-r border-[#2e2e2e]">
         <Link href={'/'}>
           <h2 className="select-none font-bold px-6 pt-9 text-[1.35rem] tracking-tight scale-x-90 scale-y-125 hidden lg:block">
             𝒫𝒾𝓍𝒶𝑔𝓇𝒶𝓂
@@ -73,7 +73,7 @@ const Sidebar = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="fixed bottom-0 left-0 md:hidden w-full h-[3.5em] border-t border-[#2e2e2e] py-3 px-6">
+      <div className="fixed bottom-0 left-0 md:hidden w-full h-[3.5em] bg-white dark:bg-black border-t border-[#2e2e2e] py-3 px-6">
         <div className="flex justify-between items-center w-full">
           {/* Home */}
           <Link href={'/'}>
