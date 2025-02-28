@@ -18,28 +18,28 @@ const Signup = () => {
           </div>
 
           <hr className="border w-64 border-gray-600 mt-[8px] " />
-          <h4 className="relative text-center text-gray-400 text-sm w-10  bg-black bottom-[28px] leading-none">
+          <h4 className="relative text-center text-gray-400 text-sm w-10 bg-white dark:bg-black bottom-[28px] leading-none">
             OR
           </h4>
 
           <div className="flex flex-col gap-2 ">
             <input
-              className=" rounded w-64 h-9 bg-gray-900 border border-gray-500  placeholder:pl-1 pl-2 text-xs  "
+              className=" rounded w-64 h-9 dark:bg-gray-900 border border-gray-500  placeholder:pl-1 pl-2 text-xs  "
               type="text"
               placeholder="Mobile Number or Email"
             />
             <input
-              className=" rounded w-64 h-9 bg-gray-900 border border-gray-500 placeholder:pl-1 pl-2 text-xs  "
+              className=" rounded w-64 h-9 dark:bg-gray-900 border border-gray-500 placeholder:pl-1 pl-2 text-xs  "
               type="text"
               placeholder="Password"
             />
             <input
-              className=" rounded w-64 h-9 bg-gray-900 border border-gray-500 placeholder:pl-1 pl-2 text-xs  "
+              className=" rounded w-64 h-9 dark:bg-gray-900 border border-gray-500 placeholder:pl-1 pl-2 text-xs  "
               type="text"
               placeholder="Fullname"
             />
             <input
-              className=" rounded w-64 h-9 bg-gray-900 border border-gray-500 placeholder:pl-1 pl-2 text-xs  "
+              className=" rounded w-64 h-9 dark:bg-gray-900 border border-gray-500 placeholder:pl-1 pl-2 text-xs  "
               type="text"
               placeholder="Username"
             />

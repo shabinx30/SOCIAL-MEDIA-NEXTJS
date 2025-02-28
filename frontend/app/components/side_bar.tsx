@@ -18,7 +18,7 @@ const menuItems = [
   { icon: <RiMessengerLine size={30} />, label: "Messages", href: "/messages" },
   { icon: <FaRegHeart size={26} />, label: "Notifications", href: "/notifications" },
   { icon: "https://cdn-icons-png.flaticon.com/512/10103/10103630.png", label: "Create", isImg: true, href: "/create" },
-  { icon: "https://cdn-icons-png.flaticon.com/512/18827/18827853.png", label: "Profile", isImg: true, href : "/profile" },
+  { icon: "https://cdn-icons-png.flaticon.com/512/18827/18827853.png", label: "Profile", isImg: true, href : "/shabinsharih" },
   { icon: "https://cdn-icons-png.flaticon.com/512/13894/13894991.png", label: "More", isImg: true, href: "/more" },
 ];
 
@@ -41,17 +41,19 @@ const Sidebar = () => {
   return (
     <>
       {/* Sidebar */}
-      <div className="fixed h-screen w-20 md:w-[5rem] lg:w-[15.3em] bg-white dark:bg-black hidden md:block border-r border-[#2e2e2e]">
+      <div className="fixed h-screen md:w-[4.5rem] lg:w-[15.3em] bg-white dark:bg-black hidden md:block border-r border-[#DBDBDB] dark:border-[#2e2e2e]">
         <Link href={'/'}>
           <h2 className="select-none font-bold px-6 pt-9 text-[1.35rem] tracking-tight scale-x-90 scale-y-125 hidden lg:block">
             𝒫𝒾𝓍𝒶𝑔𝓇𝒶𝓂
           </h2>
+          <SiInstagram size={25} className="hidden md:block lg:hidden mx-6 mt-11 text-dark dark:text-white" />
         </Link>
-        <SiInstagram size={25} className="hidden md:block lg:hidden mx-7 mt-11 text-white" />
         <div className="px-3 pt-10">
           {menuItems.map(({ icon, label, isImg, href }, index) => (
             <Link href={href} key={index}>
-              <div className="flex gap-5 items-center dark:active:brightness-50 dark:hover:bg-[#1A1A1A] hover:bg-[#F2F2F2] transition duration-200 px-4 py-3 rounded-lg mt-2">
+              <div className="relative flex gap-5 items-center dark:active:brightness-50 dark:hover:bg-[#1A1A1A] hover:bg-[#F2F2F2] transition duration-200 px-2.5 py-[0.7em] rounded-lg mt-2">
+                {/* count */}
+                {href == '/messages' ? <div className="bg-[#FF3040] border-[3px] border-white dark:text-white dark:border-black z-10 left-6 top-[0.4rem] absolute w-[1.6em] h-[1.6em] flex justify-center items-center rounded-full text-sm font-mono">{3}</div> : <></>}
                 {CurrentRoute == href ? (
                   activeMenuItems[index].isImg ? (
                     <img className="dark:invert w-[26px]" src={activeMenuItems[index].icon as string} alt={label} />
@@ -73,7 +75,7 @@ const Sidebar = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="fixed bottom-0 left-0 md:hidden w-full h-[3.5em] bg-white dark:bg-black border-t border-[#2e2e2e] py-3 px-6">
+      <div className="fixed bottom-0 left-0 md:hidden w-full h-[3.5em] bg-white dark:bg-black border-t border-[#DBDBDB] dark:border-[#2e2e2e] py-3 px-6">
         <div className="flex justify-between items-center w-full">
           {/* Home */}
           <Link href={'/'}>
@@ -92,7 +94,7 @@ const Sidebar = () => {
             {CurrentRoute == "/reels" ? (<img className="dark:invert w-[26px]" src={activeMenuItems[3].icon as string} alt= {"Reels"} />) : (<img className="dark:invert w-[26px]" src={menuItems[3].icon as string} alt={"Reels"} />)}
           </Link>
           {/* Profile */}
-          <Link href={'/profile'}>
+          <Link href={'/shabinsharih'}>
             {CurrentRoute == "/profile" ? (<img className="dark:invert w-[27px]" src={activeMenuItems[7].icon as string} alt={"Profile"} />) : (<img className="dark:invert w-[27px]" src={menuItems[7].icon as string} alt={"Profile"} />)}
           </Link>
         </div>

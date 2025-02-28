@@ -14,12 +14,12 @@ const Page = () => {
               <input
                 type="text"
                 placeholder="Email"
-                className="w-64 h-9 rounded bg-gray-900 border border-gray-500 focus:outline-none text-xxs pl-3 placeholder:pl-1 "
+                className="w-64 h-9 rounded dark:bg-gray-900 border border-gray-500 focus:outline-none text-xxs pl-3 placeholder:pl-1 "
               />
               <input
                 type="password"
                 placeholder="password"
-                className="w-64 h-9 rounded bg-gray-900 border border-gray-500 focus:outline-none text-xxs pl-3 placeholder:pl-1"
+                className="w-64 h-9 rounded dark:bg-gray-900 border border-gray-500 focus:outline-none text-xxs pl-3 placeholder:pl-1"
               />
             </div>
             <div className="flex flex-col gap-5 items-center">
