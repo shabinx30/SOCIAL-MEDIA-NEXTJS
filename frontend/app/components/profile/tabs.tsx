@@ -54,9 +54,9 @@ export default function ProfileTabs({ userId }: { userId: string | null }) {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{
                   type: "spring",
-                  stiffness: 250, // Slightly higher to speed up motion
-                  damping: 20, // Higher damping reduces bounciness
-                  mass: 0.25, // Lower mass makes it feel lighter
+                  stiffness: 250,
+                  damping: 20,
+                  mass: 0.25,
                 }}
               />
             )}
