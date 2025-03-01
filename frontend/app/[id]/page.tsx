@@ -1,3 +1,3 @@
-export default function PostsPage({ params }: { params: { id: string } }) {
-    return <h1>📷 {params.id}'s Posts</h1>;
+export default async function PostsPage({ params }: { params: { id: string } }) {
+    return <h1>📷 {await params.id}'s Posts</h1>;
 }  

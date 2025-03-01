@@ -16,8 +16,8 @@ export default async function ProfileLayout({
     const { id } = await params
 
     return (
-        <div className="profile-layout">
-            {/* 🟢 Profile Header Section (Reuse UI here) */}
+        <div className="profile-layout select-none">
+            {/* profile sections  */}
             <div className='fixed flex md:hidden w-full h-[3em] dark:bg-black border-b border-[#DBDBDB] dark:border-[#2e2e2e] justify-between items-center pl-3 pr-6'>
                 <h1 className='font-bold text-xl'>{id}</h1>
                 <div className='flex gap-6'>
@@ -61,7 +61,7 @@ export default async function ProfileLayout({
                         </div>
                         <div className='pt-8 hidden md:block gap-0'>
                             {/* name */}
-                            <p className='block'>shabin</p>
+                            <p>SHABIN</p>
                             {/* bio */}
                             <p>🧑‍💻 Web Developer</p>
                             {/* links */}
@@ -73,8 +73,6 @@ export default async function ProfileLayout({
                     </div>
                 </div>
                 <div className='pt-8 px-4 block md:hidden gap-0'>
-                    {/* name */}
-                    <p className='hidden md:block'>shabin</p>
                     {/* bio */}
                     <p>🧑‍💻 Web Developer</p>
                     {/* links */}
@@ -102,10 +100,10 @@ export default async function ProfileLayout({
                 </div>
             </div>
 
-            {/* 🟢 Navigation Tabs */}
+            {/* tab  */}
             <ProfileTabs userId={params.id} />
 
-            {/* 🟢 Dynamic Content (Posts, Reels, or Tagged) */}
+            {/* post, reels and tagged section */}
             <div className="profile-content">{children}</div>
         </div>
     );

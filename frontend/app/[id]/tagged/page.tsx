@@ -1,3 +1,3 @@
-export default function TaggedPage({ params }: { params: { id: string } }) {
-  return <h1>🏷️ {params.id}'s Tagged Posts</h1>;
+export default async function TaggedPage({ params }: { params: { id: string } }) {
+  return <h1>🏷️ {await params.id}'s Tagged Posts</h1>;
 }
