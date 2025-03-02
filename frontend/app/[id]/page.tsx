@@ -5,9 +5,9 @@ export default async function PostsPage({ params }: { params: { id: string } }) 
 
     const { id } = await params
 
-    let post = []
+    let posts: object[] = []
 
-    if (!post.length) {
+    if (!posts.length) {
         return (
             <div className="flex justify-center items-center w-full bg-background h-[10em] mt-[6em] mb-[8em]">
                 <div className="">
@@ -15,7 +15,7 @@ export default async function PostsPage({ params }: { params: { id: string } }) 
                         <PiCameraLight size={45} className="text-black dark:text-white" />
                     </div>
                     <div className="flex justify-center items-center">
-                        <h1 className="text-3xl items-center font-extrabold pt-4">Share photos</h1>
+                        <h1 className="text-2xl md:text-3xl items-center font-extrabold pt-4">Share photos</h1>
                     </div>
                     <div className="flex justify-center items-center">
                         <p className="items-center text-sm pt-5">When you share photos, they will appear on your profile.</p>
@@ -29,12 +29,9 @@ export default async function PostsPage({ params }: { params: { id: string } }) 
     } else {
         return (
             <div className="grid grid-cols-3 w-full gap-1 pt-[0.5em] pb-[6em]">
-                <div className="bg-[#2B2B2B] w-full relative aspect-square"></div>
-                <div className="bg-[#2B2B2B] w-full relative aspect-square"></div>
-                <div className="bg-[#2B2B2B] w-full relative aspect-square"></div>
-                <div className="bg-[#2B2B2B] w-full relative aspect-square"></div>
-                <div className="bg-[#2B2B2B] w-full relative aspect-square"></div>
-                <div className="bg-[#2B2B2B] w-full relative aspect-square"></div>
+                {posts.map((val, index) => (
+                    <div key={index} className="bg-[#2B2B2B] w-full relative aspect-square"></div>
+                ))}
             </div>
         )
     }

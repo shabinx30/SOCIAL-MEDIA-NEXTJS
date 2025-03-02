@@ -28,7 +28,16 @@ export default function ProfileTabs({ userId }: { userId: string | null }) {
       ),
       path: `/${userId}/reels`,
     },
-    { label: "TAGGED", icon: <RiAccountPinBoxLine size={15} />, path: `/${userId}/tagged` },
+    { label: "TAGGED", icon: (
+      <Image
+        className={`dark:invert ${currentRoute === `/${userId}/reels` ? "" : "contrast-[15%]"}`}
+        src="https://cdn-icons-png.flaticon.com/512/10349/10349222.png"
+        alt="reel"
+        width={15}
+        height={15}
+      />
+    ),
+    path: `/${userId}/tagged` },
   ];
 
   return (
