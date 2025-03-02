@@ -1,5 +1,6 @@
+"use client"
+
 import Image from "next/image";
-import { RiAccountPinBoxLine } from "react-icons/ri";
 
 export default async function TaggedPage({ params }: { params: { id: string } }) {
     const { id } = await params

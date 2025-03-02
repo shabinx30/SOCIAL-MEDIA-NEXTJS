@@ -1,3 +1,5 @@
+"use client"
+
 export default async function ReelsPage({ params }: { params: { id: string } }) {
     const { id } = await params
 

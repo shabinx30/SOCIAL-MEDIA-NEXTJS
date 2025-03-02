@@ -1,3 +1,5 @@
+"use client"
+
 //icons
 import { PiCameraLight } from "react-icons/pi";
 
