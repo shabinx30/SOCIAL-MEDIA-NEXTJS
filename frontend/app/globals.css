@@ -4,7 +4,7 @@
 
 @layer utilities {
   ::selection {
-    background-color: #FF3040; /* Your desired selection color */
+    background-color: #FF3040;
     color: white;
   }
 }

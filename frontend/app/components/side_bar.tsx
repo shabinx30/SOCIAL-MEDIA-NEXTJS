@@ -75,7 +75,7 @@ const Sidebar = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="fixed bottom-0 left-0 md:hidden w-full h-[3.5em] bg-white dark:bg-black border-t border-[#DBDBDB] dark:border-[#2e2e2e] py-3 px-6">
+      <div className="fixed z-10 bottom-0 left-0 md:hidden w-full h-[3.5em] bg-white dark:bg-black border-t border-[#DBDBDB] dark:border-[#2e2e2e] py-3 px-6">
         <div className="flex justify-between items-center w-full">
           {/* Home */}
           <Link href={'/'}>

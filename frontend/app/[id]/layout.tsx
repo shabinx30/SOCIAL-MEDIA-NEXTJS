@@ -104,7 +104,7 @@ export default async function ProfileLayout({
             <ProfileTabs userId={params.id} />
 
             {/* post, reels and tagged section */}
-            <div className="profile-content">{children}</div>
+            <div className="md:mr-[2em] lg:mr-[8em] lg:ml-[6em]">{children}</div>
         </div>
     );
 }
