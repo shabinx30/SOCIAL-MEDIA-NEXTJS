@@ -8,10 +8,9 @@ export default async function TaggedPage({ params }: { params: { id: string } })
 
     if (!posts.length) {
         return (
-            <div className="flex justify-center items-center w-full bg-background h-[10em] mt-[4em] mb-[8em]">
+            <div className="flex justify-center items-center w-full bg-background h-[10em] mt-[3.35em] mb-[8em]">
                 <div className="">
                     <div className="mx-auto flex justify-center items-center border-2 rounded-full border-black w-[4em] h-[4em] dark:border-white">
-                        {/* <RiAccountPinBoxLine size={45} className="text-black dark:text-white" /> */}
                         <Image
                             className="dark:invert"
                             src="https://cdn-icons-png.flaticon.com/512/10349/10349222.png"
