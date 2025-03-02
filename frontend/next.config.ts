@@ -1,9 +1,7 @@
 import type { NextConfig } from 'next'
  
 const nextConfig: NextConfig = {
-  devIndicators: {
-    appIsrStatus: false,
-  },
+  devIndicators: false,
   images: {
     domains: ["cdn-icons-png.flaticon.com"],
   },
