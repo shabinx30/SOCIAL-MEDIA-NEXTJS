@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 
 // icons
 import { BsGrid3X3 } from "react-icons/bs";
-import { RiAccountPinBoxLine } from "react-icons/ri";
 
 export default function ProfileTabs({ userId }: { userId: string | null }) {
   const router = useRouter();
@@ -30,7 +29,7 @@ export default function ProfileTabs({ userId }: { userId: string | null }) {
     },
     { label: "TAGGED", icon: (
       <Image
-        className={`dark:invert ${currentRoute === `/${userId}/reels` ? "" : "contrast-[15%]"}`}
+        className={`dark:invert ${currentRoute === `/${userId}/tagged` ? "" : "contrast-[15%]"}`}
         src="https://cdn-icons-png.flaticon.com/512/10349/10349222.png"
         alt="reel"
         width={15}

@@ -30,14 +30,14 @@ export default async function ProfileLayout({
             <div className='flex-1 pt-8 md:pt-0 md:px-[2em] lg:px-[4em]'>
                 <div className='flex justify-center pt-[2.5em] gap-4 md:gap-16'>
                     <div>
-                        <Image className='rounded-full md:w-[160] md:h-[160] duration-300' src={Profile} alt='profile picture' width={100} height={100} />
+                        <Image className='cursor-pointer rounded-full md:w-[160] md:h-[160] duration-300' src={Profile} alt='profile picture' width={100} height={100} />
                     </div>
                     <div className='block'>
                         <div className='hidden md:flex duration-300'>
                             <h1 className='text-xl'>{id}</h1>
                             <button className='mt-4 md:mt-0 md:ml-4 px-4 py-1 bg-[#efefef] hover:bg-[#DBDBDB] dark:bg-[#333333] h-[2.2em] rounded-lg dark:hover:bg-[#262626] text-sm duration-150'>Edit Profile</button>
                             <button className='ml-2 px-4 py-1 bg-[#efefef] hover:bg-[#DBDBDB] dark:bg-[#333333] h-[2.2em] rounded-lg dark:hover:bg-[#262626] text-sm duration-150'>View archive</button>
-                            <Image className='hidden md:block dark:invert w-6 h-6 mx-2 my-0.5' src="https://cdn-icons-png.flaticon.com/512/5693/5693241.png" alt='settings' width={20} height={20} />
+                            <Image className='hidden cursor-pointer md:block dark:invert w-6 h-6 mx-2 my-0.5' src="https://cdn-icons-png.flaticon.com/512/5693/5693241.png" alt='settings' width={20} height={20} />
                         </div>
                         <p className='md:hidden text-base font-medium'>{'SHABIN'}</p>
                         <div className='flex gap-1 md:gap-6 pt-2 md:pt-6 duration-300'>
