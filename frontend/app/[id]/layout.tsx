@@ -5,7 +5,6 @@ import Image from "next/image";
 //icons and images
 import { RiLinkM } from "react-icons/ri";
 import { GoPlus } from "react-icons/go";
-import Profile from '../assets/Images/profile.jpg'
 
 export default async function ProfileLayout({
     children,
@@ -30,7 +29,7 @@ export default async function ProfileLayout({
             <div className='flex-1 pt-8 md:pt-0 md:px-[2em] lg:px-[4em]'>
                 <div className='flex justify-center pt-[2.5em] gap-4 md:gap-16'>
                     <div>
-                        <Image className='cursor-pointer rounded-full md:w-[160] md:h-[160] duration-300' src={Profile} alt='profile picture' width={100} height={100} />
+                        <Image className='cursor-pointer rounded-full md:w-[160] md:h-[160] duration-300' src="https://instagram.fcok4-1.fna.fbcdn.net/v/t51.2885-19/476501464_1523240058345855_3565333406899966342_n.jpg?_nc_ht=instagram.fcok4-1.fna.fbcdn.net&_nc_cat=103&_nc_oc=Q6cZ2AFmAvuVSWABIM48hyQJuLl-08cjUxkMUjPOwtHH0v8YPQs6epqPJdaewSg-KuQeHdQ&_nc_ohc=mCOxKKMrIaUQ7kNvgHfSSVI&_nc_gid=af8b59559ba54a58a9cb6cbc866ffde9&edm=ALGbJPMBAAAA&ccb=7-5&oh=00_AYBP21YcMLjgWjR9oT1Agodt3dZ-r0Lngl4B_Y81inoRLA&oe=67CCA09A&_nc_sid=7d3ac5" alt='profile picture' width={100} height={100} />
                     </div>
                     <div className='block'>
                         <div className='hidden md:flex duration-300'>
