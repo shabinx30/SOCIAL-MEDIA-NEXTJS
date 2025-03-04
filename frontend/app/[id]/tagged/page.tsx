@@ -2,14 +2,13 @@
 import Image from "next/image";
 
 export default async function TaggedPage({ params }: { params: { id: string } }) {
-    const { id } = await params
 
-    let posts: object[] = []
+    const posts: object[] = []
 
     if (!posts.length) {
         return (
             <div className="flex justify-center items-center w-full bg-background h-[10em] mt-[3.35em] mb-[8em]">
-                <div className="">
+                <div>
                     <div className="mx-auto flex justify-center items-center border-2 rounded-full border-black w-[4em] h-[4em] dark:border-white">
                         <Image
                             className="dark:invert"

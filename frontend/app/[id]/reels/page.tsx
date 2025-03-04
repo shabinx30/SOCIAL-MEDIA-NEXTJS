@@ -1,14 +1,13 @@
 
 
 export default async function ReelsPage({ params }: { params: { id: string } }) {
-    const { id } = await params
 
-    let posts: object[] = []
+    const posts: object[] = []
 
     if (!posts.length) {
         return (
             <div className="flex justify-center items-center w-full bg-background h-[10em] mt-[4em] mb-[8em]">
-                <div className="">
+                <div>
                     <div className="flex justify-center items-center">
                         <h1 className="text-2xl md:text-3xl items-center font-extrabold pt-4">Share a moment with the world</h1>
                     </div>

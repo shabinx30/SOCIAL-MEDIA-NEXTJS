@@ -9,6 +9,7 @@ import { FaHeart } from "react-icons/fa6";
 
 import Link from 'next/link'
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const menuItems = [
   { icon: "https://cdn-icons-png.flaticon.com/512/2932/2932143.png", label: "Home", isImg: true, href: "/" },
@@ -56,13 +57,13 @@ const Sidebar = () => {
                 {href == '/messages' ? <div className="bg-[#FF3040] border-[3px] border-white dark:text-white dark:border-black z-10 left-6 top-[0.4rem] absolute w-[1.6em] h-[1.6em] flex justify-center items-center rounded-full text-sm font-mono">{3}</div> : <></>}
                 {CurrentRoute == href ? (
                   activeMenuItems[index].isImg ? (
-                    <img className="dark:invert w-[26px]" src={activeMenuItems[index].icon as string} alt={label} />
+                    <Image width={26} height={26} className="dark:invert w-[26px]" src={activeMenuItems[index].icon as string} alt={label} />
                   ) : (
                     activeMenuItems[index].icon
                   )
                 ) : (
                   isImg ? (
-                    <img className="dark:invert w-[26px]" src={icon as string} alt={label} />
+                    <Image width={26} height={26} className="dark:invert w-[26px]" src={icon as string} alt={label} />
                   ) : (
                     icon
                   )
@@ -79,11 +80,11 @@ const Sidebar = () => {
         <div className="flex justify-between items-center w-full">
           {/* Home */}
           <Link href={'/'}>
-            {CurrentRoute == "/" ? (<img className="dark:invert w-[26px]" src={activeMenuItems[0].icon as string} alt={"Home"} />) : (<img className="dark:invert w-[24px]" src={menuItems[0].icon as string} alt={"Home"} />)}
+            {CurrentRoute == "/" ? (<Image width={26} height={26} className="dark:invert w-[26px]" src={activeMenuItems[0].icon as string} alt={"Home"} />) : (<Image width={24} height={24} className="dark:invert w-[24px]" src={menuItems[0].icon as string} alt={"Home"} />)}
           </Link>
           {/* Search */}
           <Link href={'/search'}>
-            {CurrentRoute == "/search" ? (<img className="dark:invert w-[24px]" src={activeMenuItems[1].icon as string} alt={"Search"} />) : (<img className="dark:invert w-[26px]" src={menuItems[1].icon as string} alt={"Home"} />)}
+            {CurrentRoute == "/search" ? (<Image width={24} height={24} className="dark:invert w-[24px]" src={activeMenuItems[1].icon as string} alt={"Search"} />) : (<Image width={26} height={26} className="dark:invert w-[26px]" src={menuItems[1].icon as string} alt={"Home"} />)}
           </Link>
           {/* Explore */}
           <Link href={'/explore'}>
@@ -91,11 +92,11 @@ const Sidebar = () => {
           </Link>
           {/* Reels */}
           <Link href={'/reels'}>
-            {CurrentRoute == "/reels" ? (<img className="dark:invert w-[26px]" src={activeMenuItems[3].icon as string} alt= {"Reels"} />) : (<img className="dark:invert w-[26px]" src={menuItems[3].icon as string} alt={"Reels"} />)}
+            {CurrentRoute == "/reels" ? (<Image width={26} height={26} className="dark:invert w-[26px]" src={activeMenuItems[3].icon as string} alt= {"Reels"} />) : (<Image width={26} height={26} className="dark:invert w-[26px]" src={menuItems[3].icon as string} alt={"Reels"} />)}
           </Link>
           {/* Profile */}
           <Link href={'/shabinsharih'}>
-            {CurrentRoute == "/profile" ? (<img className="dark:invert w-[27px]" src={activeMenuItems[7].icon as string} alt={"Profile"} />) : (<img className="dark:invert w-[27px]" src={menuItems[7].icon as string} alt={"Profile"} />)}
+            {CurrentRoute == "/profile" ? (<Image width={27} height={27} className="dark:invert w-[27px]" src={activeMenuItems[7].icon as string} alt={"Profile"} />) : (<Image width={27} height={27} className="dark:invert w-[27px]" src={menuItems[7].icon as string} alt={"Profile"} />)}
           </Link>
         </div>
       </div>
