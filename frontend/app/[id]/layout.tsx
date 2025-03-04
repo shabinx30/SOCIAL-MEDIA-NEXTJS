@@ -5,7 +5,7 @@ import Image from "next/image";
 //icons and images
 import { RiLinkM } from "react-icons/ri";
 import { GoPlus } from "react-icons/go";
-import Profile from '@/app/assets/Images/profile.jpg'
+import Profile from '../assets/Images/profile.jpg'
 
 export default async function ProfileLayout({
     children,
