@@ -1,7 +1,7 @@
 
 import Image from "next/image";
 
-export default async function TaggedPage({ params }: { params: { id: string } }) {
+const TaggedPage = () => {
 
     const posts: object[] = []
 
@@ -34,3 +34,5 @@ export default async function TaggedPage({ params }: { params: { id: string } })
         )
     }
 }
+
+export default TaggedPage

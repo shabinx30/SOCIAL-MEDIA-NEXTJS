@@ -1,6 +1,6 @@
 
 
-export default async function ReelsPage({ params }: { params: { id: string } }) {
+const ReelsPage = () => {
 
     const posts: object[] = []
 
@@ -27,3 +27,5 @@ export default async function ReelsPage({ params }: { params: { id: string } }) 
         )
     }
 }
+
+export default ReelsPage

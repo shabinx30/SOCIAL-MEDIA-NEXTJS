@@ -2,7 +2,7 @@
 //icons
 import { PiCameraLight } from "react-icons/pi";
 
-export default async function PostsPage({ params }: { params: { id: string } }) {
+const PostsPage = () => {
 
     const posts: object[] = []
 
@@ -34,4 +34,6 @@ export default async function PostsPage({ params }: { params: { id: string } }) 
             </div>
         )
     }
-}  
+} 
+
+export default PostsPage

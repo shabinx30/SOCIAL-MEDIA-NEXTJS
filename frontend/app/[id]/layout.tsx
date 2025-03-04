@@ -6,13 +6,13 @@ import Image from "next/image";
 import { RiLinkM } from "react-icons/ri";
 import { GoPlus } from "react-icons/go";
 
-export default async function ProfileLayout({
+const ProfileLayout = async ({
     children,
     params,
 }: {
     children: React.ReactNode;
     params: { id: string };
-}) {
+}) => {
 
     const { id } = await params
 
@@ -109,3 +109,5 @@ export default async function ProfileLayout({
         </div>
     );
 }
+
+export default ProfileLayout

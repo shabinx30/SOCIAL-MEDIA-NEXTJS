@@ -1,7 +1,5 @@
-// import Link from "next/link";
 
-// Link;
-export default function Home() {
+const Home = () => {
  
   return (
     <div>
@@ -10,3 +8,5 @@ export default function Home() {
   );
  
 }
+
+export default Home
