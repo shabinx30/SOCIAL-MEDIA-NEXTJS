@@ -3,7 +3,7 @@ const Home = () => {
  
   return (
     <div>
-      Project starts now....
+      Project starts very soon.....
     </div>
   );
  
