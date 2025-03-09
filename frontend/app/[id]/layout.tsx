@@ -63,7 +63,7 @@ const ProfileLayout = async ({ children, params }: { children: React.ReactNode; 
             <div className="flex-1 pt-8 md:pt-0 md:px-[2em] lg:px-[4em]">
                 <div className="flex justify-evenly lg:justify-center gap-0 lg:gap-8 pt-[2.5em]">
                     {/* Profile picture */}
-                    <div className="flex md:w-[160] md:h-[160]">
+                    <div className="flex md:w-[160px] md:h-[160px]">
                         <Image
                             className="cursor-pointer md:w-full md:h-full rounded-full duration-300"
                             src={profileData.profileImage}
