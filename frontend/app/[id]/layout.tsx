@@ -52,7 +52,7 @@ const ProfileLayout = async ({ children, params }: { children: React.ReactNode; 
     return (
         <div className="profile-layout select-none">
             {/* Mobile header */}
-            <div className="fixed flex md:hidden w-full h-[3em] dark:bg-black border-b border-[#DBDBDB] dark:border-[#2e2e2e] justify-between items-center px-3">
+            <div className="fixed flex md:hidden w-full h-[3em] bg-white dark:bg-black border-b border-[#DBDBDB] dark:border-[#2e2e2e] justify-between items-center px-3">
                 <h1 className="font-bold text-xl">{id}</h1>
                 <div className="flex gap-6">
                     <Image className="dark:invert" src="https://cdn-icons-png.flaticon.com/512/10103/10103630.png" alt="create" width={26} height={22} />
