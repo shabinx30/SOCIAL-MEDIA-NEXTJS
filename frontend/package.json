@@ -28,5 +28,8 @@
     "postcss": "^8.5.3",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
+  },
+  "optionalDependencies": {
+    "sharp": "^0.33.5"
   }
 }
