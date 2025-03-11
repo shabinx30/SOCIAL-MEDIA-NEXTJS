@@ -52,7 +52,7 @@ const Post = () => {
 
 const Home = () => {
 
-    let arr = [12, 3, 4, 5, 6, 7, 8, 9, 10]
+    const arr = [12, 3, 4, 5, 6, 7, 8, 9, 10]
 
     return (
         <>
