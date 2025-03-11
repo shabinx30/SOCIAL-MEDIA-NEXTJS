@@ -18,7 +18,8 @@
   :root {
     --background: #000000;
     --foreground: #ededed;
-  }
+    color-scheme: dark;
+  } 
 }
 
 body {
