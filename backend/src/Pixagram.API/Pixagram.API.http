@@ -1,0 +1,6 @@
+@Pixagram.API_HostAddress = http://localhost:5073
+
+GET {{Pixagram.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

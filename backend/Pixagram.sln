@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{94E7B5CE-A7BF-4FEB-A375-CFE8519D70B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pixagram.API", "src\Pixagram.API\Pixagram.API.csproj", "{C56661D1-9D47-4727-8693-3BAE73EAC76A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pixagram.Application", "src\Pixagram.Application\Pixagram.Application.csproj", "{253B0EC8-2366-48BE-98A5-209BFA25D063}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pixagram.Domain", "src\Pixagram.Domain\Pixagram.Domain.csproj", "{C122B130-3C13-4AEA-A441-FD6129803DD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pixagram.Infrastructure", "src\Pixagram.Infrastructure\Pixagram.Infrastructure.csproj", "{7D42EB7B-39BB-4D6D-A3DB-60429C0EE0A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C56661D1-9D47-4727-8693-3BAE73EAC76A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C56661D1-9D47-4727-8693-3BAE73EAC76A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C56661D1-9D47-4727-8693-3BAE73EAC76A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C56661D1-9D47-4727-8693-3BAE73EAC76A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{253B0EC8-2366-48BE-98A5-209BFA25D063}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{253B0EC8-2366-48BE-98A5-209BFA25D063}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{253B0EC8-2366-48BE-98A5-209BFA25D063}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{253B0EC8-2366-48BE-98A5-209BFA25D063}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C122B130-3C13-4AEA-A441-FD6129803DD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C122B130-3C13-4AEA-A441-FD6129803DD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C122B130-3C13-4AEA-A441-FD6129803DD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C122B130-3C13-4AEA-A441-FD6129803DD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D42EB7B-39BB-4D6D-A3DB-60429C0EE0A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D42EB7B-39BB-4D6D-A3DB-60429C0EE0A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D42EB7B-39BB-4D6D-A3DB-60429C0EE0A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D42EB7B-39BB-4D6D-A3DB-60429C0EE0A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C56661D1-9D47-4727-8693-3BAE73EAC76A} = {94E7B5CE-A7BF-4FEB-A375-CFE8519D70B0}
+		{253B0EC8-2366-48BE-98A5-209BFA25D063} = {94E7B5CE-A7BF-4FEB-A375-CFE8519D70B0}
+		{C122B130-3C13-4AEA-A441-FD6129803DD1} = {94E7B5CE-A7BF-4FEB-A375-CFE8519D70B0}
+		{7D42EB7B-39BB-4D6D-A3DB-60429C0EE0A1} = {94E7B5CE-A7BF-4FEB-A375-CFE8519D70B0}
+	EndGlobalSection
+EndGlobal

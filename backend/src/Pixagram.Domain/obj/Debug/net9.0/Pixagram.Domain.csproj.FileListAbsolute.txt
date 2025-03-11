@@ -1,0 +1,12 @@
+C:\Users\user\Desktop\SOCIAL-MEDIA-NEXTJS\backend\src\Pixagram.Domain\bin\Debug\net9.0\Pixagram.Domain.deps.json
+C:\Users\user\Desktop\SOCIAL-MEDIA-NEXTJS\backend\src\Pixagram.Domain\bin\Debug\net9.0\Pixagram.Domain.dll
+C:\Users\user\Desktop\SOCIAL-MEDIA-NEXTJS\backend\src\Pixagram.Domain\bin\Debug\net9.0\Pixagram.Domain.pdb
+C:\Users\user\Desktop\SOCIAL-MEDIA-NEXTJS\backend\src\Pixagram.Domain\obj\Debug\net9.0\Pixagram.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\SOCIAL-MEDIA-NEXTJS\backend\src\Pixagram.Domain\obj\Debug\net9.0\Pixagram.Domain.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\SOCIAL-MEDIA-NEXTJS\backend\src\Pixagram.Domain\obj\Debug\net9.0\Pixagram.Domain.AssemblyInfo.cs
+C:\Users\user\Desktop\SOCIAL-MEDIA-NEXTJS\backend\src\Pixagram.Domain\obj\Debug\net9.0\Pixagram.Domain.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\SOCIAL-MEDIA-NEXTJS\backend\src\Pixagram.Domain\obj\Debug\net9.0\Pixagram.Domain.sourcelink.json
+C:\Users\user\Desktop\SOCIAL-MEDIA-NEXTJS\backend\src\Pixagram.Domain\obj\Debug\net9.0\Pixagram.Domain.dll
+C:\Users\user\Desktop\SOCIAL-MEDIA-NEXTJS\backend\src\Pixagram.Domain\obj\Debug\net9.0\refint\Pixagram.Domain.dll
+C:\Users\user\Desktop\SOCIAL-MEDIA-NEXTJS\backend\src\Pixagram.Domain\obj\Debug\net9.0\Pixagram.Domain.pdb
+C:\Users\user\Desktop\SOCIAL-MEDIA-NEXTJS\backend\src\Pixagram.Domain\obj\Debug\net9.0\ref\Pixagram.Domain.dll

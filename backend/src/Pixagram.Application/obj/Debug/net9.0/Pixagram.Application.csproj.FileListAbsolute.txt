@@ -1,0 +1,16 @@
+C:\Users\user\Desktop\SOCIAL-MEDIA-NEXTJS\backend\src\Pixagram.Application\bin\Debug\net9.0\Pixagram.Application.deps.json
+C:\Users\user\Desktop\SOCIAL-MEDIA-NEXTJS\backend\src\Pixagram.Application\bin\Debug\net9.0\Pixagram.Application.dll
+C:\Users\user\Desktop\SOCIAL-MEDIA-NEXTJS\backend\src\Pixagram.Application\bin\Debug\net9.0\Pixagram.Application.pdb
+C:\Users\user\Desktop\SOCIAL-MEDIA-NEXTJS\backend\src\Pixagram.Application\bin\Debug\net9.0\Pixagram.Domain.dll
+C:\Users\user\Desktop\SOCIAL-MEDIA-NEXTJS\backend\src\Pixagram.Application\bin\Debug\net9.0\Pixagram.Domain.pdb
+C:\Users\user\Desktop\SOCIAL-MEDIA-NEXTJS\backend\src\Pixagram.Application\obj\Debug\net9.0\Pixagram.Application.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\SOCIAL-MEDIA-NEXTJS\backend\src\Pixagram.Application\obj\Debug\net9.0\Pixagram.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\SOCIAL-MEDIA-NEXTJS\backend\src\Pixagram.Application\obj\Debug\net9.0\Pixagram.Application.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\SOCIAL-MEDIA-NEXTJS\backend\src\Pixagram.Application\obj\Debug\net9.0\Pixagram.Application.AssemblyInfo.cs
+C:\Users\user\Desktop\SOCIAL-MEDIA-NEXTJS\backend\src\Pixagram.Application\obj\Debug\net9.0\Pixagram.Application.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\SOCIAL-MEDIA-NEXTJS\backend\src\Pixagram.Application\obj\Debug\net9.0\Pixagram.Application.sourcelink.json
+C:\Users\user\Desktop\SOCIAL-MEDIA-NEXTJS\backend\src\Pixagram.Application\obj\Debug\net9.0\Pixagram.F3815DF9.Up2Date
+C:\Users\user\Desktop\SOCIAL-MEDIA-NEXTJS\backend\src\Pixagram.Application\obj\Debug\net9.0\Pixagram.Application.dll
+C:\Users\user\Desktop\SOCIAL-MEDIA-NEXTJS\backend\src\Pixagram.Application\obj\Debug\net9.0\refint\Pixagram.Application.dll
+C:\Users\user\Desktop\SOCIAL-MEDIA-NEXTJS\backend\src\Pixagram.Application\obj\Debug\net9.0\Pixagram.Application.pdb
+C:\Users\user\Desktop\SOCIAL-MEDIA-NEXTJS\backend\src\Pixagram.Application\obj\Debug\net9.0\ref\Pixagram.Application.dll
