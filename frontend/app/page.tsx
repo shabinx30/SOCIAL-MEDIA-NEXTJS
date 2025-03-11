@@ -1,5 +1,4 @@
 import Image from "next/image";
-import profile from "@/public/Images/profile.jpg"
 
 //icons
 import { FaRegHeart } from "react-icons/fa";
@@ -23,7 +22,7 @@ const Post = () => {
             <div className="pt-6 w-[30em]">
                 <div className="flex gap-4 px-2">
                     <div>
-                        <Image className="rounded-full" loading="lazy" src={profile} alt="profile" width={30} height={30} />
+                        <Image className="rounded-full" src="https://instagram.fcok3-2.fna.fbcdn.net/v/t51.2885-19/476501464_1523240058345855_3565333406899966342_n.jpg?_nc_ht=instagram.fcok3-2.fna.fbcdn.net&_nc_cat=103&_nc_oc=Q6cZ2AHku2GBAwVT0RJbW0qNB0e9Klc1URYJa7oUdN5mH68D-1X9yPAw8CAF0DxQkOjFYgKyNt7htnmgrYd6BhVPvZQV&_nc_ohc=y1eTcK4XTocQ7kNvgG1yK3c&_nc_gid=10bd902f436144a48546adeab947251b&edm=ALGbJPMBAAAA&ccb=7-5&oh=00_AYGizs5U10YpANF8aSXUKVdGSIUR99TVSZZrClFcX-j-Lw&oe=67D64B9A&_nc_sid=7d3ac5" alt="profile" width={30} height={30} />
                     </div>
                     <div className="block">
                         <p className="font-semibold text-sm">shabinsharih <span className="text-[#a1a1a1] font-light">{" • "} 48m</span></p>
@@ -40,7 +39,7 @@ const Post = () => {
                         <Image width={26} height={20} className="dark:invert h-6 rotate-[17.5deg]" src="https://cdn-icons-png.flaticon.com/256//2697/2697852.png" alt="comments" />
                     </div>
                     <div>
-                        <LuBookmark size={26}/>
+                        <LuBookmark size={26} />
                     </div>
                 </div>
                 <p className="px-2 py-2 text-[0.9em] font-semibold">44,832 likes</p>
@@ -78,7 +77,7 @@ const Home = () => {
                 <div className="hidden lg:block pt-3 w-[35%] px-6">
                     <div className="flex justify-between">
                         <div className="flex gap-3">
-                            <Image className="rounded-full" src={profile} alt="profile" width={45} height={45} />
+                            <Image className="rounded-full" src="https://instagram.fcok3-2.fna.fbcdn.net/v/t51.2885-19/476501464_1523240058345855_3565333406899966342_n.jpg?_nc_ht=instagram.fcok3-2.fna.fbcdn.net&_nc_cat=103&_nc_oc=Q6cZ2AHku2GBAwVT0RJbW0qNB0e9Klc1URYJa7oUdN5mH68D-1X9yPAw8CAF0DxQkOjFYgKyNt7htnmgrYd6BhVPvZQV&_nc_ohc=y1eTcK4XTocQ7kNvgG1yK3c&_nc_gid=10bd902f436144a48546adeab947251b&edm=ALGbJPMBAAAA&ccb=7-5&oh=00_AYGizs5U10YpANF8aSXUKVdGSIUR99TVSZZrClFcX-j-Lw&oe=67D64B9A&_nc_sid=7d3ac5" alt="profile" width={45} height={45} />
                             <div>
                                 <p className="text-sm font-semibold">shabinsharih</p>
                                 <p className="text-[#a1a1a1] text-sm">SHABIN</p>
