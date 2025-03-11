@@ -1,5 +1,5 @@
 import Image from "next/image";
-import profile from "../public/Images/profile.jpg"
+import profile from "@/public/Images/profile.jpg"
 
 //icons
 import { FaRegHeart } from "react-icons/fa";
