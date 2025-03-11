@@ -12,27 +12,27 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 
 const menuItems = [
-  { icon: "https://cdn-icons-png.flaticon.com/512/2932/2932143.png", label: "Home", isImg: true, href: "/" },
-  { icon: "https://cdn-icons-png.flaticon.com/512/17213/17213017.png", label: "Search", isImg: true, href: "/search" },
+  { icon: "https://cdn-icons-png.flaticon.com/256/2932/2932143.png", label: "Home", isImg: true, href: "/" },
+  { icon: "https://cdn-icons-png.flaticon.com/256/17213/17213017.png", label: "Search", isImg: true, href: "/search" },
   { icon: <MdOutlineExplore size={30} />, label: "Explore", href: "/explore" },
-  { icon: "https://cdn-icons-png.flaticon.com/512/12595/12595880.png", label: "Reels", isImg: true, href: "/reels" },
+  { icon: "https://cdn-icons-png.flaticon.com/256/12595/12595880.png", label: "Reels", isImg: true, href: "/reels" },
   { icon: <RiMessengerLine size={30} />, label: "Messages", href: "/messages" },
   { icon: <FaRegHeart size={26} />, label: "Notifications", href: "/notifications" },
-  { icon: "https://cdn-icons-png.flaticon.com/512/10103/10103630.png", label: "Create", isImg: true, href: "/create" },
-  { icon: "https://cdn-icons-png.flaticon.com/512/18827/18827853.png", label: "Profile", isImg: true, href : "/shabinsharih" },
-  { icon: "https://cdn-icons-png.flaticon.com/512/13894/13894991.png", label: "More", isImg: true, href: "/more" },
+  { icon: "https://cdn-icons-png.flaticon.com/256/10103/10103630.png", label: "Create", isImg: true, href: "/create" },
+  { icon: "https://cdn-icons-png.flaticon.com/256/18827/18827853.png", label: "Profile", isImg: true, href : "/shabinsharih" },
+  { icon: "https://cdn-icons-png.flaticon.com/256/13894/13894991.png", label: "More", isImg: true, href: "/more" },
 ];
 
 const activeMenuItems = [
-  { icon: "https://cdn-icons-png.flaticon.com/512/3405/3405771.png", isImg: true },
-  { icon: "https://cdn-icons-png.flaticon.com/512/151/151773.png", isImg: true },
+  { icon: "https://cdn-icons-png.flaticon.com/256/3405/3405771.png", isImg: true },
+  { icon: "https://cdn-icons-png.flaticon.com/256/151/151773.png", isImg: true },
   { icon: <MdExplore size={30} /> },
-  { icon: "https://cdn-icons-png.flaticon.com/512/12595/12595820.png", isImg: true },
+  { icon: "https://cdn-icons-png.flaticon.com/256/12595/12595820.png", isImg: true },
   { icon: <RiMessengerFill size={30} /> },
   { icon: <FaHeart size={26} /> },
-  { icon: "https://cdn-icons-png.flaticon.com/512/9790/9790398.png", isImg: true },
-  { icon: "https://cdn-icons-png.flaticon.com/512/18827/18827853.png", isImg: true },
-  { icon: "https://cdn-icons-png.flaticon.com/512/8867/8867520.png", isImg: true },
+  { icon: "https://cdn-icons-png.flaticon.com/256/9790/9790398.png", isImg: true },
+  { icon: "https://cdn-icons-png.flaticon.com/256/18827/18827853.png", isImg: true },
+  { icon: "https://cdn-icons-png.flaticon.com/256/8867/8867520.png", isImg: true },
 ]
 
 const Sidebar = () => {

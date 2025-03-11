@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Pixagram",
   description: "Pixagram is a social media plateform.",
+  other: {
+    "google": "notranslate",  // Prevents translation
+  },
 };
 
 //cheking the route
