@@ -84,11 +84,11 @@ const Sidebar = () => {
           </Link>
           {/* Search */}
           <Link href={'/search'}>
-            {CurrentRoute == "/search" ? (<Image width={24} height={24} className="dark:invert w-[24px]" src={activeMenuItems[1].icon as string} alt={"Search"} />) : (<Image width={26} height={26} className="dark:invert w-[26px]" src={menuItems[1].icon as string} alt={"Home"} />)}
+            {CurrentRoute == "/search" ? (<Image width={24} height={24} className="dark:invert w-[24px]" src={activeMenuItems[1].icon as string} alt={"Search"} />) : (<Image width={26} height={26} className="dark:invert w-[26px]" src={menuItems[1].icon as string} alt={"Search"} />)}
           </Link>
-          {/* Explore */}
-          <Link href={'/explore'}>
-            {CurrentRoute == "/explore" ? (activeMenuItems[2].icon) : (menuItems[2].icon)}
+          {/* Create */}
+          <Link href={'/create'}>
+            {CurrentRoute == "/create" ? (<Image width={24} height={24} className="dark:invert w-[24px]" src={activeMenuItems[6].icon as string} alt={"Create"} />) : (<Image width={26} height={26} className="dark:invert w-[26px]" src={menuItems[6].icon as string} alt={"Create"} />)} 
           </Link>
           {/* Reels */}
           <Link href={'/reels'}>
