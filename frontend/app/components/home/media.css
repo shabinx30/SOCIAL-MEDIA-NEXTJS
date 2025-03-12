@@ -8,10 +8,10 @@
         scale: 0;
         rotate: 0deg;
     }
-    40%{
+    35%{
         opacity: 1;
-        scale: 1;
-        rotate: -25deg;
+        scale: 1.1;
+        rotate: -20deg;
     }
     75%{
         rotate: 0deg;
@@ -39,10 +39,10 @@
         scale: 0;
         rotate: 0deg;
     }
-    40%{
+    35%{
         opacity: 1;
-        scale: 1;
-        rotate: 25deg;
+        scale: 1.1;
+        rotate: 20deg;
     }
     75%{
         rotate: 0deg;
@@ -69,9 +69,9 @@
         opacity: 0;
         scale: 0;
     }
-    40%{
+    35%{
         opacity: 1;
-        scale: 1;
+        scale: 1.1;
     }
     80%{
         scale: 0.85;
