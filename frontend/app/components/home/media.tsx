@@ -5,7 +5,7 @@ import { FaHeart } from 'react-icons/fa6'
 
 import "../home/media.css"
 
-const media = () => {
+const Media = () => {
 
     const [isClick, setClick] = useState(false)
     const [random, setRandom] = useState('')
@@ -49,4 +49,4 @@ const media = () => {
     )
 }
 
-export default media
+export default Media
