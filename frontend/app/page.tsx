@@ -38,8 +38,8 @@ const Post = () => {
                 <div className="flex justify-between pt-3 px-2">
                     <div className="flex gap-4">
                         <FaRegHeart size={26} />
-                        <Image width={26} height={22} className="dark:invert" src="https://cdn-icons-png.flaticon.com/256/3031/3031126.png" alt="comments" />
-                        <Image width={26} height={20} className="dark:invert h-6 rotate-[17.5deg]" src="https://cdn-icons-png.flaticon.com/256//2697/2697852.png" alt="comments" />
+                        <Image width={26} height={22} className="dark:invert select-none" src="https://cdn-icons-png.flaticon.com/256/3031/3031126.png" alt="comments" />
+                        <Image width={26} height={20} className="dark:invert select-none h-6 rotate-[17.5deg]" src="https://cdn-icons-png.flaticon.com/256//2697/2697852.png" alt="comments" />
                     </div>
                     <LuBookmark size={26} />
                 </div>
