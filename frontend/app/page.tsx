@@ -7,18 +7,8 @@ import { LuBookmark } from "react-icons/lu";
 import { MdMoreVert } from "react-icons/md";
 
 // components
-import Media from "./components/home/Media";
-
-
-const Stories = () => {
-    return (
-        <div className="inline-block bg-gradient-to-tr from-[#F8C400] via-[#E8174B] to-[#D300C5] rounded-full w-[5.5em] h-[5.5em] md:w-[5em] md:h-[5em] p-[0.18em] md:p-0.5 mx-2 cursor-pointer">
-            <div className="bg-white dark:bg-[#000000] relative border-black w-full h-full rounded-full">
-                <div className="bg-[#333333] absolute animate-pulse border-4 border-black w-full h-full rounded-full"></div>
-            </div>
-        </div>
-    )
-}
+import Media from "./components/home/media/Media";
+import Story from "./components/home/story/Story"
 
 const Post = () => {
     return (
@@ -57,7 +47,7 @@ const Post = () => {
 
 const Home = () => {
 
-    const arr = [12, 3, 4, 5, 6, 7, 8, 9, 10]
+    const arr: number[] = [12, 3, 4, 5, 6, 7, 8, 9, 10]
 
     return (
         <>
@@ -73,7 +63,7 @@ const Home = () => {
             <div className="flex md:pt-6">
                 <div className="block w-full lg:w-[65%]">
                     <div className="inline-block w-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide px-2">
-                        {arr.map((_, index) => <Stories key={index} />)}
+                        {arr.map((_, index) => <Story key={index} />)}
                     </div>
                     <div className="block">
                         {arr.map((_, index) => <Post key={index} />)}
