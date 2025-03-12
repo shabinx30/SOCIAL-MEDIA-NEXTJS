@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { FaHeart } from 'react-icons/fa6'
 
 import "../home/media.css"
@@ -14,12 +14,13 @@ const Media = () => {
     let animation: number
 
     function showLike() {
+        
         animation = Math.floor(Math.random() * animations.length);
         setRandom(animations[animation])
         setClick(true)
-        setTimeout(() => {
-            setClick(false)
-        }, 1100);
+
+        //hiding the like icon 
+        setTimeout(() => setClick(false), 1100);
     }
 
     return (
