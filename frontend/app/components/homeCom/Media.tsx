@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { FaHeart } from 'react-icons/fa6'
 
-import "../home/media.css"
+import "./media.css"
 
 const Media = () => {
 
