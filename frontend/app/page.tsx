@@ -7,7 +7,7 @@ import { LuBookmark } from "react-icons/lu";
 import { MdMoreVert } from "react-icons/md";
 
 // components
-import Media from "./components/homeCom/Media";
+import Media from "./components/home/Media";
 
 
 const Stories = () => {

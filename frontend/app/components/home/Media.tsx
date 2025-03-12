@@ -39,9 +39,9 @@ const Media = () => {
                 <svg width="0" height="0">
                     <defs>
                         <linearGradient id="heartGradient" gradientTransform="rotate(45)">
-                            <stop offset="0%" stopColor="#F8C400" />
+                            <stop offset="0%" stopColor="#f88400" />
                             <stop offset="50%" stopColor="#E8174B" />
-                            <stop offset="100%" stopColor="#D300C5" />
+                            <stop offset="100%" stopColor="#d30086" />
                         </linearGradient>
                     </defs>
                 </svg>
