@@ -19,8 +19,13 @@ const Media = () => {
         setRandom(animations[animation])
         setClick(true)
 
+        if (typeof window !== "undefined" && navigator.vibrate) {
+            navigator.vibrate(100); // Vibrates for 100ms
+        }
+
         //hiding the like icon 
         setTimeout(() => setClick(false), 1100);
+
     }
 
     return (
