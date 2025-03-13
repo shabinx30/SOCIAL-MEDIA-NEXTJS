@@ -49,12 +49,12 @@ const Story: React.FC = () => {
 
     return (
         <div className="inline-block bg-gradient-to-tr from-[#F8C400] via-[#E8174B] to-[#D300C5] rounded-full w-[5.5em] h-[5.5em] md:w-[5em] md:h-[5em] p-[0.18em] md:p-0.5 mx-2 cursor-pointer">
-            <div className="bg-white dark:bg-[#000000] border-black w-full h-full rounded-full">
+            <div className="bg-white dark:bg-[#000000] dark:border-black w-full h-full rounded-full">
                 <div 
                     ref={divRef}
                     onClick={toggleExpand} 
                     className={`
-                        bg-[#333333] border-4 border-black
+                        bg-[#c8c8c8] dark:bg-[#333333] border-4 border-white dark:border-black
                         ${!isExpanded ? 'w-full h-full rounded-full animate-pulse' : ''}
                         ${isExpanded ? 'expanding-div fixed z-50' : ''}
                     `}

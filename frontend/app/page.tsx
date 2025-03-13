@@ -44,7 +44,7 @@ const Post = () => {
                     <p className="text-[#7a7a7a] text-[0.95em] my-2 cursor-pointer">View all 45 comments</p>
                     <input type="text" placeholder="Add a comment" className="placeholder-[#7a7a7a] text-[0.95em] outline-none bg-transparent" />
                 </div>
-                <hr className="border-t-2 border-[#282828] mt-[1em]" />
+                <hr className="border-t-2 border-[#c8c8c8] dark:border-[#282828] mt-[1em]" />
             </div>
         </div>
     )
