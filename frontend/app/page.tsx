@@ -16,26 +16,31 @@ const Post = () => {
             <div className="pt-6 w-[30em]">
                 <div className="flex justify-between px-2">
                     <div className="flex gap-2">
-                        <Image className="rounded-full my-auto" loading="lazy" src="https://instagram.fcok3-2.fna.fbcdn.net/v/t51.2885-19/476501464_1523240058345855_3565333406899966342_n.jpg?_nc_ht=instagram.fcok3-2.fna.fbcdn.net&_nc_cat=103&_nc_oc=Q6cZ2AHku2GBAwVT0RJbW0qNB0e9Klc1URYJa7oUdN5mH68D-1X9yPAw8CAF0DxQkOjFYgKyNt7htnmgrYd6BhVPvZQV&_nc_ohc=y1eTcK4XTocQ7kNvgG1yK3c&_nc_gid=10bd902f436144a48546adeab947251b&edm=ALGbJPMBAAAA&ccb=7-5&oh=00_AYGizs5U10YpANF8aSXUKVdGSIUR99TVSZZrClFcX-j-Lw&oe=67D64B9A&_nc_sid=7d3ac5" alt="profile" width={30} height={30} />
+                        <Image className="rounded-full my-auto cursor-pointer" loading="lazy" src="https://instagram.fcok3-2.fna.fbcdn.net/v/t51.2885-19/476501464_1523240058345855_3565333406899966342_n.jpg?_nc_ht=instagram.fcok3-2.fna.fbcdn.net&_nc_cat=103&_nc_oc=Q6cZ2AHku2GBAwVT0RJbW0qNB0e9Klc1URYJa7oUdN5mH68D-1X9yPAw8CAF0DxQkOjFYgKyNt7htnmgrYd6BhVPvZQV&_nc_ohc=y1eTcK4XTocQ7kNvgG1yK3c&_nc_gid=10bd902f436144a48546adeab947251b&edm=ALGbJPMBAAAA&ccb=7-5&oh=00_AYGizs5U10YpANF8aSXUKVdGSIUR99TVSZZrClFcX-j-Lw&oe=67D64B9A&_nc_sid=7d3ac5" alt="profile" width={30} height={30} />
                         <div className="block">
-                            <p className="font-semibold text-sm">shabinsharih <span className="text-[#a1a1a1] text-sm font-light">{" • "} 48m</span></p>
+                            <p className="font-semibold text-sm cursor-pointer">shabinsharih <span className="text-[#a1a1a1] text-xs font-light cursor-default">{" • "} 48m</span></p>
                             <p className="text-sm">♪ music</p>
                         </div>
                     </div>
-                    <MdMoreVert className="cursor-pointer my-auto" size={20} />
+                    <div className="flex gap-4 h-[2em] my-auto">
+                        <button className="px-5 py-1 bg-[#efefef] hover:bg-[#DBDBDB] dark:bg-[#333333] rounded-lg dark:hover:bg-[#262626] text-sm duration-150">
+                            Follow
+                        </button>
+                        <MdMoreVert className="cursor-pointer my-auto" size={20} />
+                    </div>
                 </div>
-                <Media/>
+                <Media />
                 <div className="flex justify-between pt-3 px-2">
-                    <div className="flex gap-4">
+                    <div className="flex gap-4 cursor-pointer">
                         <FaRegHeart size={26} />
                         <Image width={26} height={22} className="dark:invert select-none" src="https://cdn-icons-png.flaticon.com/256/3031/3031126.png" alt="comments" />
                         <Image width={26} height={20} className="dark:invert select-none h-6 rotate-[17.5deg]" src="https://cdn-icons-png.flaticon.com/256//2697/2697852.png" alt="comments" />
                     </div>
-                    <LuBookmark size={26} />
+                    <LuBookmark className="cursor-pointer" size={26} />
                 </div>
                 <div className="px-2">
-                    <p className="py-2 text-[0.9em] font-semibold">44,832 likes</p>
-                    <p className="text-[0.8em] font-light"><span className="font-semibold text-sm mr-2">shabinsharih</span>The highly anticipated follow up to one of our 2024 music videos of the year. EYECANDY FEATURE: HANUMANKIND - RUN IT...</p>
+                    <p className="py-2 text-[0.9em] font-semibold cursor-pointer">44,832 likes</p>
+                    <p className="text-[0.8em] font-light cursor-pointer"><span className="font-semibold text-sm mr-2">shabinsharih</span>The highly anticipated follow up to one of our 2024 music videos of the year. EYECANDY FEATURE: HANUMANKIND - RUN IT...</p>
                     <p className="text-[#7a7a7a] text-[0.95em] my-2 cursor-pointer">View all 45 comments</p>
                     <input type="text" placeholder="Add a comment" className="placeholder-[#7a7a7a] text-[0.95em] outline-none bg-transparent" />
                 </div>
