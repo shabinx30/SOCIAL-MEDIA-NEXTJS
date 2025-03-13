@@ -22,6 +22,7 @@ export const metadata: Metadata = {
 
 //cheking the route
 import RouteChecker from "./components/route_checker";
+import AppProvider from "./context/AppContext";
 
 export default function RootLayout({
   children,
@@ -33,9 +34,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <RouteChecker>
-          {children}
-        </RouteChecker>
+        <AppProvider>
+          <RouteChecker>
+            {children}
+          </RouteChecker>
+        </AppProvider>
       </body>
     </html>
   );

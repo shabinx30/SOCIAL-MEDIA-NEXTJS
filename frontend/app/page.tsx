@@ -1,18 +1,26 @@
+"use client"
+
 import Image from "next/image";
 
 //icons
 import { FaRegHeart } from "react-icons/fa";
 import { RiMessengerLine } from "react-icons/ri";
 import { LuBookmark } from "react-icons/lu";
-import { MdMoreVert } from "react-icons/md";
 
 // components
 import Media from "./components/home/media/Media";
-import Story from "./components/home/story/Story"
+import Story from "./components/home/story/Story";
+import PopUp from "./components/home/popup/PopUp";
+
+// useContext
+import { useAppContext } from "@/app/context/AppContext"
+
 
 const Post = () => {
+    const { isPop } = useAppContext();
+
     return (
-        <div className="flex justify-center">
+        <div className={`flex justify-center ${isPop ? 'pr-[0.6em]' : ''}`}>
             <div className="pt-6 w-[30em]">
                 <div className="flex justify-between px-2">
                     <div className="flex gap-2">
@@ -22,11 +30,11 @@ const Post = () => {
                             <p className="text-sm">♪ music</p>
                         </div>
                     </div>
-                    <div className="flex gap-4 h-[2em] my-auto">
+                    <div className="flex gap-4 h-[2em]">
                         <button className="px-5 py-1 bg-[#efefef] hover:bg-[#DBDBDB] dark:bg-[#333333] rounded-lg dark:hover:bg-[#262626] text-sm duration-150">
                             Follow
                         </button>
-                        <MdMoreVert className="cursor-pointer my-auto" size={20} />
+                        <PopUp/>
                     </div>
                 </div>
                 <Media />
@@ -52,10 +60,12 @@ const Post = () => {
 
 const Home = () => {
 
+    const { isPop } = useAppContext();
     const arr: number[] = [12, 3, 4, 5, 6, 7, 8, 9, 10]
 
     return (
         <>
+            {/* <PopUp/> */}
             <div className="md:hidden flex justify-between bg-white dark:bg-black w-full pt-2 pb-6 px-2">
                 <h2 className="select-none font-semibold text-[1.75rem] tracking-tight scale-x-90 scale-y-125 block md:hidden">
                     𝒫𝒾𝓍𝒶𝑔𝓇𝒶𝓂
@@ -74,7 +84,7 @@ const Home = () => {
                         {arr.map((_, index) => <Post key={index} />)}
                     </div>
                 </div>
-                <div className="hidden lg:block pt-3 w-[35%] px-6">
+                <div className={`hidden lg:block pt-3 w-[35%] ${isPop ? 'pr-[2.5em] pl-3.5' : 'px-6'}`}>
                     <div className="flex justify-between">
                         <div className="flex gap-3">
                             <Image className="rounded-full" loading="lazy" src="https://instagram.fcok3-2.fna.fbcdn.net/v/t51.2885-19/476501464_1523240058345855_3565333406899966342_n.jpg?_nc_ht=instagram.fcok3-2.fna.fbcdn.net&_nc_cat=103&_nc_oc=Q6cZ2AHku2GBAwVT0RJbW0qNB0e9Klc1URYJa7oUdN5mH68D-1X9yPAw8CAF0DxQkOjFYgKyNt7htnmgrYd6BhVPvZQV&_nc_ohc=y1eTcK4XTocQ7kNvgG1yK3c&_nc_gid=10bd902f436144a48546adeab947251b&edm=ALGbJPMBAAAA&ccb=7-5&oh=00_AYGizs5U10YpANF8aSXUKVdGSIUR99TVSZZrClFcX-j-Lw&oe=67D64B9A&_nc_sid=7d3ac5" alt="profile" width={45} height={45} />
