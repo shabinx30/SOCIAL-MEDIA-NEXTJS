@@ -21,18 +21,12 @@ const Media = () => {
 
         if (typeof window !== "undefined") {
             const isAndroid = /Android/i.test(navigator.userAgent);
-            const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
             const isSupportedBrowser =
                 "vibrate" in navigator && typeof navigator.vibrate === "function";
 
+            // Trigger vibration only on supported devices
             if (isAndroid && isSupportedBrowser) {
-                navigator.vibrate(100); // Vibrates for 100ms on Android
-            } else if (isIOS) {
-                // CSS Tap Feedback as a soft fallback for iOS
-                const el = document.body;
-                el.style.transition = "transform 0.1s ease";
-                el.style.transform = "scale(0.98)";
-                setTimeout(() => (el.style.transform = "scale(1)"), 100);
+                navigator.vibrate(100); // Vibrates for 100ms
             }
         }
 
