@@ -14,13 +14,26 @@ const Media = () => {
     let animation: number
 
     function showLike() {
-        
+
         animation = Math.floor(Math.random() * animations.length);
         setRandom(animations[animation])
         setClick(true)
 
-        if (typeof window !== "undefined" && navigator.vibrate) {
-            navigator.vibrate(100); // Vibrates for 100ms
+        if (typeof window !== "undefined") {
+            const isAndroid = /Android/i.test(navigator.userAgent);
+            const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+            const isSupportedBrowser =
+                "vibrate" in navigator && typeof navigator.vibrate === "function";
+
+            if (isAndroid && isSupportedBrowser) {
+                navigator.vibrate(100); // Vibrates for 100ms on Android
+            } else if (isIOS) {
+                // CSS Tap Feedback as a soft fallback for iOS
+                const el = document.body;
+                el.style.transition = "transform 0.1s ease";
+                el.style.transform = "scale(0.98)";
+                setTimeout(() => (el.style.transform = "scale(1)"), 100);
+            }
         }
 
         //hiding the like icon 
@@ -30,7 +43,7 @@ const Media = () => {
 
     return (
         <>
-            <div className="w-full h-[30em] flex items-center justify-center bg-[#282828] rounded-md mt-2"
+            <div className="w-full h-[30em] flex items-center justify-center bg-[#282828] md:rounded-md mt-2"
                 onDoubleClick={showLike}
             >
                 {/* image */}
