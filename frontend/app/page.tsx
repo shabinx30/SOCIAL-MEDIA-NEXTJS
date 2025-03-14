@@ -1,8 +1,6 @@
 "use client"
 
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion"
-import { useEffect, useState } from "react"
 
 //icons
 import { FaRegHeart } from "react-icons/fa";
@@ -68,7 +66,7 @@ const Post = () => {
 
 const Home = () => {
 
-    const {isPop, setPop} = useAppContext()
+    const {isPop} = useAppContext()
 
     const arr: number[] = [12, 3, 4, 5, 6, 7, 8, 9, 10]
 
