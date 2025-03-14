@@ -15,7 +15,10 @@ export default {
       fontSize: {
         xxs: "11px",
       },
+      backgroundClip: {
+        text: 'text',
+      }
     },
   },
-  plugins: [],
+  plugins: [require('tailwind-scrollbar-hide')],
 } satisfies Config;

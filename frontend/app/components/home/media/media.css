@@ -1,0 +1,186 @@
+.like-animation-1 {
+    animation: fadeOut-1 1s ease-in-out forwards;
+}
+
+@keyframes fadeOut-1 {
+    0% {
+        opacity: 0;
+        scale: 0;
+        rotate: 0deg;
+    }
+
+    35% {
+        opacity: 1;
+        scale: 1.1;
+        rotate: -20deg;
+    }
+
+    75% {
+        rotate: 0deg;
+    }
+
+    80% {
+        scale: 0.85;
+        opacity: 1;
+    }
+
+    85% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-2.5em);
+        opacity: 0;
+    }
+}
+
+.like-animation-2 {
+    animation: fadeOut-2 1s ease-in-out forwards;
+}
+
+@keyframes fadeOut-2 {
+    0% {
+        opacity: 0;
+        scale: 0;
+        rotate: 0deg;
+    }
+
+    35% {
+        opacity: 1;
+        scale: 1.1;
+        rotate: 20deg;
+    }
+
+    75% {
+        rotate: 0deg;
+    }
+
+    80% {
+        scale: 0.85;
+        opacity: 1;
+    }
+
+    85% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-2.5em);
+        opacity: 0;
+    }
+}
+
+.like-animation-3 {
+    animation: fadeOut-3 1s ease-in-out forwards;
+}
+
+@keyframes fadeOut-3 {
+    0% {
+        opacity: 0;
+        scale: 0;
+    }
+
+    35% {
+        opacity: 1;
+        scale: 1.1;
+    }
+
+    80% {
+        scale: 0.85;
+        opacity: 1;
+    }
+
+    85% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-2.5em);
+        opacity: 0;
+    }
+}
+
+.like-animation-4 {
+    animation: fadeOut-4 1s ease-in-out forwards;
+}
+
+@keyframes fadeOut-4 {
+    0% {
+        opacity: 0;
+        scale: 0;
+        rotate: 0deg;
+    }
+
+    35% {
+        opacity: 1;
+        scale: 1.1;
+        rotate: 25deg;
+    }
+
+    75% {
+        rotate: 0deg;
+    }
+
+    80% {
+        scale: 0.85;
+        opacity: 1;
+    }
+
+    85% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-2.5em);
+        opacity: 0;
+    }
+}
+
+.like-animation-5 {
+    animation: fadeOut-5 1s ease-in-out forwards;
+}
+
+@keyframes fadeOut-5 {
+    0% {
+        opacity: 0;
+        scale: 0;
+        rotate: 0deg;
+    }
+
+    35% {
+        opacity: 1;
+        scale: 1.1;
+        rotate: -25deg;
+    }
+
+    75% {
+        rotate: 0deg;
+    }
+
+    80% {
+        scale: 0.85;
+        opacity: 1;
+    }
+
+    85% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-2.5em);
+        opacity: 0;
+    }
+}
+
+.media-container {
+    width: 100%;
+    height: 30em;
+    overflow: hidden;
+    position: relative;
+}
+
+.heart-icon {
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+}

@@ -15,10 +15,15 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Pixagram",
   description: "Pixagram is a social media plateform.",
+  other: {
+    "google": "notranslate",  // Prevents translation
+  },
 };
 
 //cheking the route
 import RouteChecker from "./components/route_checker";
+import AppProvider from "./context/AppContext";
+import PopBg from "./components/home/popup/PopBg";
 
 export default function RootLayout({
   children,
@@ -30,9 +35,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <RouteChecker>
-          {children}
-        </RouteChecker>
+        <AppProvider>
+          <PopBg/>
+          <RouteChecker>
+            {children}
+          </RouteChecker>
+        </AppProvider>
       </body>
     </html>
   );

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Pixagram.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+35dacfde72081212493d582b1eec6f3672491f6f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7765b84f36b3e024c2041ddbf423b6b6dbb1af5b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Pixagram.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Pixagram.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

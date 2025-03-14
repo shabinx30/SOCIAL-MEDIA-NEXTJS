@@ -18,6 +18,7 @@
   :root {
     --background: #000000;
     --foreground: #ededed;
+    color-scheme: dark;
   }
 }
 
@@ -26,3 +27,5 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
