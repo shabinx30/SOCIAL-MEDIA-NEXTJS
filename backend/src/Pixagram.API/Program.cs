@@ -23,10 +23,11 @@ builder.Services.AddOpenApi();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend",
-        policy => policy.AllowAnyOrigin()
+        policy => policy.WithOrigins("http://pixagram.tungstenz.online") // Change to your Next.js URL
                         .AllowAnyMethod()
                         .AllowAnyHeader());
 });
+
 
 var app = builder.Build();
 
@@ -40,7 +41,12 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseSwaggerUI(o => o.SwaggerEndpoint("/openapi/v1.json", "Swagger Demo"));
 app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+
+
+
