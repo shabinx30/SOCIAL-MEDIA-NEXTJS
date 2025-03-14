@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\SOCIAL-MEDIA-NEXTJS\\backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7D42EB7B-39BB-4D6D-A3DB-60429C0EE0A1}|src\\Pixagram.Infrastructure\\Pixagram.Infrastructure.csproj|c:\\users\\user\\desktop\\social-media-nextjs\\backend\\src\\pixagram.infrastructure\\pixagram.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7D42EB7B-39BB-4D6D-A3DB-60429C0EE0A1}|src\\Pixagram.Infrastructure\\Pixagram.Infrastructure.csproj|solutionrelative:src\\pixagram.infrastructure\\pixagram.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C56661D1-9D47-4727-8693-3BAE73EAC76A}|src\\Pixagram.API\\Pixagram.API.csproj|c:\\users\\user\\desktop\\social-media-nextjs\\backend\\src\\pixagram.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C56661D1-9D47-4727-8693-3BAE73EAC76A}|src\\Pixagram.API\\Pixagram.API.csproj|solutionrelative:src\\pixagram.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C56661D1-9D47-4727-8693-3BAE73EAC76A}|src\\Pixagram.API\\Pixagram.API.csproj|c:\\users\\user\\desktop\\social-media-nextjs\\backend\\src\\pixagram.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{C56661D1-9D47-4727-8693-3BAE73EAC76A}|src\\Pixagram.API\\Pixagram.API.csproj|solutionrelative:src\\pixagram.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{C56661D1-9D47-4727-8693-3BAE73EAC76A}|src\\Pixagram.API\\Pixagram.API.csproj|c:\\users\\user\\desktop\\social-media-nextjs\\backend\\src\\pixagram.api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C56661D1-9D47-4727-8693-3BAE73EAC76A}|src\\Pixagram.API\\Pixagram.API.csproj|solutionrelative:src\\pixagram.api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C122B130-3C13-4AEA-A441-FD6129803DD1}|src\\Pixagram.Domain\\Pixagram.Domain.csproj|c:\\users\\user\\desktop\\social-media-nextjs\\backend\\src\\pixagram.domain\\entities\\uer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C122B130-3C13-4AEA-A441-FD6129803DD1}|src\\Pixagram.Domain\\Pixagram.Domain.csproj|solutionrelative:src\\pixagram.domain\\entities\\uer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7D42EB7B-39BB-4D6D-A3DB-60429C0EE0A1}|src\\Pixagram.Infrastructure\\Pixagram.Infrastructure.csproj|c:\\users\\user\\desktop\\social-media-nextjs\\backend\\src\\pixagram.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,20 +27,20 @@
       "RelativeMoniker": "D:0:0:{7D42EB7B-39BB-4D6D-A3DB-60429C0EE0A1}|src\\Pixagram.Infrastructure\\Pixagram.Infrastructure.csproj|solutionrelative:src\\pixagram.infrastructure\\persistence\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C56661D1-9D47-4727-8693-3BAE73EAC76A}|src\\Pixagram.API\\Pixagram.API.csproj|c:\\users\\user\\desktop\\social-media-nextjs\\backend\\src\\pixagram.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C56661D1-9D47-4727-8693-3BAE73EAC76A}|src\\Pixagram.API\\Pixagram.API.csproj|solutionrelative:src\\pixagram.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C56661D1-9D47-4727-8693-3BAE73EAC76A}|src\\Pixagram.API\\Pixagram.API.csproj|c:\\users\\user\\desktop\\social-media-nextjs\\backend\\src\\pixagram.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C56661D1-9D47-4727-8693-3BAE73EAC76A}|src\\Pixagram.API\\Pixagram.API.csproj|solutionrelative:src\\pixagram.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7D42EB7B-39BB-4D6D-A3DB-60429C0EE0A1}|src\\Pixagram.Infrastructure\\Pixagram.Infrastructure.csproj|c:\\users\\user\\desktop\\social-media-nextjs\\backend\\src\\pixagram.infrastructure\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D42EB7B-39BB-4D6D-A3DB-60429C0EE0A1}|src\\Pixagram.Infrastructure\\Pixagram.Infrastructure.csproj|solutionrelative:src\\pixagram.infrastructure\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C122B130-3C13-4AEA-A441-FD6129803DD1}|src\\Pixagram.Domain\\Pixagram.Domain.csproj|c:\\users\\user\\desktop\\social-media-nextjs\\backend\\src\\pixagram.domain\\entities\\uer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C122B130-3C13-4AEA-A441-FD6129803DD1}|src\\Pixagram.Domain\\Pixagram.Domain.csproj|solutionrelative:src\\pixagram.domain\\entities\\uer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7D42EB7B-39BB-4D6D-A3DB-60429C0EE0A1}|src\\Pixagram.Infrastructure\\Pixagram.Infrastructure.csproj|c:\\users\\user\\desktop\\social-media-nextjs\\backend\\src\\pixagram.infrastructure\\dependencyinjection.cs\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D42EB7B-39BB-4D6D-A3DB-60429C0EE0A1}|src\\Pixagram.Infrastructure\\Pixagram.Infrastructure.csproj|solutionrelative:src\\pixagram.infrastructure\\dependencyinjection.cs\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C56661D1-9D47-4727-8693-3BAE73EAC76A}|src\\Pixagram.API\\Pixagram.API.csproj|c:\\users\\user\\desktop\\social-media-nextjs\\backend\\src\\pixagram.api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C56661D1-9D47-4727-8693-3BAE73EAC76A}|src\\Pixagram.API\\Pixagram.API.csproj|solutionrelative:src\\pixagram.api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7D42EB7B-39BB-4D6D-A3DB-60429C0EE0A1}|src\\Pixagram.Infrastructure\\Pixagram.Infrastructure.csproj|c:\\users\\user\\desktop\\social-media-nextjs\\backend\\src\\pixagram.infrastructure\\migrations\\20250310160144_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -41,10 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C56661D1-9D47-4727-8693-3BAE73EAC76A}|src\\Pixagram.API\\Pixagram.API.csproj|c:\\users\\user\\desktop\\social-media-nextjs\\backend\\src\\pixagram.api\\pixagram.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{C56661D1-9D47-4727-8693-3BAE73EAC76A}|src\\Pixagram.API\\Pixagram.API.csproj|solutionrelative:src\\pixagram.api\\pixagram.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D42EB7B-39BB-4D6D-A3DB-60429C0EE0A1}|src\\Pixagram.Infrastructure\\Pixagram.Infrastructure.csproj|c:\\users\\user\\desktop\\social-media-nextjs\\backend\\src\\pixagram.infrastructure\\pixagram.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{7D42EB7B-39BB-4D6D-A3DB-60429C0EE0A1}|src\\Pixagram.Infrastructure\\Pixagram.Infrastructure.csproj|solutionrelative:src\\pixagram.infrastructure\\pixagram.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7D42EB7B-39BB-4D6D-A3DB-60429C0EE0A1}|src\\Pixagram.Infrastructure\\Pixagram.Infrastructure.csproj|c:\\users\\user\\desktop\\social-media-nextjs\\backend\\src\\pixagram.infrastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -70,7 +74,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 203,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -79,45 +83,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ApplicationDbContextModelSnapshot.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\SOCIAL-MEDIA-NEXTJS\\backend\\src\\Pixagram.Infrastructure\\Migrations\\ApplicationDbContextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "src\\Pixagram.Infrastructure\\Migrations\\ApplicationDbContextModelSnapshot.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\SOCIAL-MEDIA-NEXTJS\\backend\\src\\Pixagram.Infrastructure\\Migrations\\ApplicationDbContextModelSnapshot.cs",
-              "RelativeToolTip": "src\\Pixagram.Infrastructure\\Migrations\\ApplicationDbContextModelSnapshot.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T09:19:23.041Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Uer.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\SOCIAL-MEDIA-NEXTJS\\backend\\src\\Pixagram.Domain\\Entities\\Uer.cs",
-              "RelativeDocumentMoniker": "src\\Pixagram.Domain\\Entities\\Uer.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\SOCIAL-MEDIA-NEXTJS\\backend\\src\\Pixagram.Domain\\Entities\\Uer.cs",
-              "RelativeToolTip": "src\\Pixagram.Domain\\Entities\\Uer.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T15:42:58.659Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\SOCIAL-MEDIA-NEXTJS\\backend\\src\\Pixagram.Infrastructure\\Persistence\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "src\\Pixagram.Infrastructure\\Persistence\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\SOCIAL-MEDIA-NEXTJS\\backend\\src\\Pixagram.Infrastructure\\Persistence\\ApplicationDbContext.cs",
-              "RelativeToolTip": "src\\Pixagram.Infrastructure\\Persistence\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAAA8AAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T15:31:49.659Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\SOCIAL-MEDIA-NEXTJS\\backend\\src\\Pixagram.Infrastructure\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "src\\Pixagram.Infrastructure\\Repositories\\UserRepository.cs",
@@ -130,20 +95,98 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\SOCIAL-MEDIA-NEXTJS\\backend\\src\\Pixagram.API\\Program.cs",
               "RelativeDocumentMoniker": "src\\Pixagram.API\\Program.cs",
               "ToolTip": "C:\\Users\\user\\Desktop\\SOCIAL-MEDIA-NEXTJS\\backend\\src\\Pixagram.API\\Program.cs",
               "RelativeToolTip": "src\\Pixagram.API\\Program.cs",
-              "ViewState": "AgIAABYAAAAA//////8QwCUAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAIwBkAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-10T14:59:03.744Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\SOCIAL-MEDIA-NEXTJS\\backend\\src\\Pixagram.Infrastructure\\Persistence\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "src\\Pixagram.Infrastructure\\Persistence\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\SOCIAL-MEDIA-NEXTJS\\backend\\src\\Pixagram.Infrastructure\\Persistence\\ApplicationDbContext.cs",
+              "RelativeToolTip": "src\\Pixagram.Infrastructure\\Persistence\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAAA8AAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T15:31:49.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Uer.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\SOCIAL-MEDIA-NEXTJS\\backend\\src\\Pixagram.Domain\\Entities\\Uer.cs",
+              "RelativeDocumentMoniker": "src\\Pixagram.Domain\\Entities\\Uer.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\SOCIAL-MEDIA-NEXTJS\\backend\\src\\Pixagram.Domain\\Entities\\Uer.cs",
+              "RelativeToolTip": "src\\Pixagram.Domain\\Entities\\Uer.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T15:42:58.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\SOCIAL-MEDIA-NEXTJS\\backend\\src\\Pixagram.API\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "src\\Pixagram.API\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\SOCIAL-MEDIA-NEXTJS\\backend\\src\\Pixagram.API\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "src\\Pixagram.API\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-10T16:08:00.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Pixagram.Infrastructure.csproj",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\SOCIAL-MEDIA-NEXTJS\\backend\\src\\Pixagram.Infrastructure\\Pixagram.Infrastructure.csproj",
+              "RelativeDocumentMoniker": "src\\Pixagram.Infrastructure\\Pixagram.Infrastructure.csproj",
+              "ToolTip": "C:\\Users\\user\\Desktop\\SOCIAL-MEDIA-NEXTJS\\backend\\src\\Pixagram.Infrastructure\\Pixagram.Infrastructure.csproj",
+              "RelativeToolTip": "src\\Pixagram.Infrastructure\\Pixagram.Infrastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-10T15:55:09.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\SOCIAL-MEDIA-NEXTJS\\backend\\src\\Pixagram.API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "src\\Pixagram.API\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\user\\Desktop\\SOCIAL-MEDIA-NEXTJS\\backend\\src\\Pixagram.API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "src\\Pixagram.API\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABUAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-14T12:10:07.282Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ApplicationDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\SOCIAL-MEDIA-NEXTJS\\backend\\src\\Pixagram.Infrastructure\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "src\\Pixagram.Infrastructure\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\SOCIAL-MEDIA-NEXTJS\\backend\\src\\Pixagram.Infrastructure\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeToolTip": "src\\Pixagram.Infrastructure\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T09:19:23.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\SOCIAL-MEDIA-NEXTJS\\backend\\src\\Pixagram.API\\appsettings.json",
               "RelativeDocumentMoniker": "src\\Pixagram.API\\appsettings.json",
@@ -156,33 +199,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "DependencyInjection.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\SOCIAL-MEDIA-NEXTJS\\backend\\src\\Pixagram.Infrastructure\\DependencyInjection.cs\\DependencyInjection.cs",
               "RelativeDocumentMoniker": "src\\Pixagram.Infrastructure\\DependencyInjection.cs\\DependencyInjection.cs",
               "ToolTip": "C:\\Users\\user\\Desktop\\SOCIAL-MEDIA-NEXTJS\\backend\\src\\Pixagram.Infrastructure\\DependencyInjection.cs\\DependencyInjection.cs",
               "RelativeToolTip": "src\\Pixagram.Infrastructure\\DependencyInjection.cs\\DependencyInjection.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwBIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-10T16:05:27.005Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\SOCIAL-MEDIA-NEXTJS\\backend\\src\\Pixagram.API\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "src\\Pixagram.API\\Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\SOCIAL-MEDIA-NEXTJS\\backend\\src\\Pixagram.API\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "src\\Pixagram.API\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAA2wA0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T16:08:00.958Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "20250310160144_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\SOCIAL-MEDIA-NEXTJS\\backend\\src\\Pixagram.Infrastructure\\Migrations\\20250310160144_InitialCreate.cs",
               "RelativeDocumentMoniker": "src\\Pixagram.Infrastructure\\Migrations\\20250310160144_InitialCreate.cs",
@@ -190,23 +220,12 @@
               "RelativeToolTip": "src\\Pixagram.Infrastructure\\Migrations\\20250310160144_InitialCreate.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T16:01:45.167Z"
+              "WhenOpened": "2025-03-10T16:01:45.167Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Pixagram.Infrastructure.csproj",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\SOCIAL-MEDIA-NEXTJS\\backend\\src\\Pixagram.Infrastructure\\Pixagram.Infrastructure.csproj",
-              "RelativeDocumentMoniker": "src\\Pixagram.Infrastructure\\Pixagram.Infrastructure.csproj",
-              "ToolTip": "C:\\Users\\user\\Desktop\\SOCIAL-MEDIA-NEXTJS\\backend\\src\\Pixagram.Infrastructure\\Pixagram.Infrastructure.csproj",
-              "RelativeToolTip": "src\\Pixagram.Infrastructure\\Pixagram.Infrastructure.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-03-10T15:55:09.951Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Post.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\SOCIAL-MEDIA-NEXTJS\\backend\\src\\Pixagram.Domain\\Entities\\Post.cs",
               "RelativeDocumentMoniker": "src\\Pixagram.Domain\\Entities\\Post.cs",
@@ -217,7 +236,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\SOCIAL-MEDIA-NEXTJS\\backend\\src\\Pixagram.Infrastructure\\Class1.cs",
               "RelativeDocumentMoniker": "src\\Pixagram.Infrastructure\\Class1.cs",
@@ -225,23 +244,25 @@
               "RelativeToolTip": "src\\Pixagram.Infrastructure\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T14:32:59.446Z"
+              "WhenOpened": "2025-03-10T14:32:59.446Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Pixagram.API.csproj",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\SOCIAL-MEDIA-NEXTJS\\backend\\src\\Pixagram.API\\Pixagram.API.csproj",
               "RelativeDocumentMoniker": "src\\Pixagram.API\\Pixagram.API.csproj",
               "ToolTip": "C:\\Users\\user\\Desktop\\SOCIAL-MEDIA-NEXTJS\\backend\\src\\Pixagram.API\\Pixagram.API.csproj",
               "RelativeToolTip": "src\\Pixagram.API\\Pixagram.API.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-03-10T15:01:04.723Z"
+              "WhenOpened": "2025-03-10T15:01:04.723Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "InfrastructureServiceRegistration.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\SOCIAL-MEDIA-NEXTJS\\backend\\src\\Pixagram.Infrastructure\\DependencyInjection\\InfrastructureServiceRegistration.cs",
               "RelativeDocumentMoniker": "src\\Pixagram.Infrastructure\\DependencyInjection\\InfrastructureServiceRegistration.cs",
@@ -252,7 +273,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "PixagramDbContext.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\SOCIAL-MEDIA-NEXTJS\\backend\\src\\Pixagram.Infrastructure\\Persistence\\PixagramDbContext.cs",
               "RelativeDocumentMoniker": "src\\Pixagram.Infrastructure\\Persistence\\PixagramDbContext.cs",

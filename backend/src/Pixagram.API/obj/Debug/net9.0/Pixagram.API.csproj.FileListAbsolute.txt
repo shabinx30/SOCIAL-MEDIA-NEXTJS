@@ -173,3 +173,6 @@ C:\Users\user\Desktop\SOCIAL-MEDIA-NEXTJS\backend\src\Pixagram.API\obj\Debug\net
 C:\Users\user\Desktop\SOCIAL-MEDIA-NEXTJS\backend\src\Pixagram.API\obj\Debug\net9.0\Pixagram.API.genruntimeconfig.cache
 C:\Users\user\Desktop\SOCIAL-MEDIA-NEXTJS\backend\src\Pixagram.API\obj\Debug\net9.0\ref\Pixagram.API.dll
 C:\Users\user\Desktop\SOCIAL-MEDIA-NEXTJS\backend\src\Pixagram.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\user\Desktop\SOCIAL-MEDIA-NEXTJS\backend\src\Pixagram.API\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\user\Desktop\SOCIAL-MEDIA-NEXTJS\backend\src\Pixagram.API\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\user\Desktop\SOCIAL-MEDIA-NEXTJS\backend\src\Pixagram.API\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
