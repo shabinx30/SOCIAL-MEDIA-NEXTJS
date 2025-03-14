@@ -53,9 +53,12 @@ const Story: React.FC = () => {
                 <div 
                     ref={divRef}
                     onClick={toggleExpand} 
+
+                    // here u wanna put animate-pulse on (!isExpanded) section
+
                     className={`
-                        bg-[#c8c8c8] dark:bg-[#333333] border-4 border-white dark:border-black
-                        ${!isExpanded ? 'w-full h-full rounded-full animate-pulse' : ''}
+                        bg-[#c8c8c8] dark:bg-[#333333] 
+                        ${!isExpanded ? 'w-full h-full rounded-full border-4 border-white dark:border-black' : ''}
                         ${isExpanded ? 'expanding-div fixed z-50' : ''}
                     `}
                     style={isExpanded ? {

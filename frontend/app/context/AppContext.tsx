@@ -11,6 +11,7 @@ interface AppContextType {
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
 const AppProvider = ({ children }: { children: ReactNode }) => {
+    
     const [isPop, setPop] = useState<boolean>(false)
 
     return (

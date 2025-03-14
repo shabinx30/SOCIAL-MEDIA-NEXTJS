@@ -1,23 +1,25 @@
 "use client"
 
 import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion"
+import { useEffect, useState } from "react"
 
 //icons
 import { FaRegHeart } from "react-icons/fa";
 import { RiMessengerLine } from "react-icons/ri";
 import { LuBookmark } from "react-icons/lu";
+import { MdMoreVert } from "react-icons/md"
 
 // components
 import Media from "./components/home/media/Media";
 import Story from "./components/home/story/Story";
-import PopUp from "./components/home/popup/PopUp";
+import { useAppContext } from "./context/AppContext";
 
-// useContext
-import { useAppContext } from "@/app/context/AppContext"
 
 
 const Post = () => {
-    const { isPop } = useAppContext();
+
+    const { isPop, setPop } = useAppContext();
 
     return (
         <div className={`flex justify-center ${isPop ? 'lg:pr-[0.6em]' : ''}`}>
@@ -34,7 +36,13 @@ const Post = () => {
                         <button className="px-5 py-1 bg-[#efefef] hover:bg-[#DBDBDB] dark:bg-[#333333] rounded-lg dark:hover:bg-[#262626] text-sm duration-150">
                             Follow
                         </button>
-                        <PopUp/>
+                        <MdMoreVert
+                            onClick={() => setPop(true)}
+                            className="cursor-pointer my-auto"
+                            size={20}
+                        />
+
+                        
                     </div>
                 </div>
                 <Media />
@@ -60,12 +68,13 @@ const Post = () => {
 
 const Home = () => {
 
-    const { isPop } = useAppContext();
+    const {isPop, setPop} = useAppContext()
+
     const arr: number[] = [12, 3, 4, 5, 6, 7, 8, 9, 10]
+
 
     return (
         <>
-            {/* <PopUp/> */}
             <div className="md:hidden flex justify-between bg-white dark:bg-black w-full pt-2 pb-6 px-2">
                 <h2 className="select-none font-semibold text-[1.75rem] tracking-tight scale-x-90 scale-y-125 block md:hidden">
                     𝒫𝒾𝓍𝒶𝑔𝓇𝒶𝓂
