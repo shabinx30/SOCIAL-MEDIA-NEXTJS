@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 //cheking the route
 import RouteChecker from "./components/route_checker";
 import AppProvider from "./context/AppContext";
-import PopBg from "./components/home/popup/PopBg";
+import PopUp from "./components/home/popup/PopUp";
 
 export default function RootLayout({
   children,
@@ -36,7 +36,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <AppProvider>
-          <PopBg/>
+          <PopUp/>
           <RouteChecker>
             {children}
           </RouteChecker>

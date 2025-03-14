@@ -1,62 +1,63 @@
-// "use client"
+"use client"
 
-// import { motion, AnimatePresence } from "framer-motion"
-// import { useEffect } from "react"
-// import { MdMoreVert } from "react-icons/md"
-// import { useAppContext } from "@/app/context/AppContext"
+import React, { useEffect } from 'react'
+import { useAppContext } from "@/app/context/AppContext"
+import { AnimatePresence, motion } from 'framer-motion'
 
-// const ITEMS = ['Report', 'Follow', 'Add to favorite', 'Go to post', 'Share to...', 'Copy link', 'About this account', 'Cancel']
 
-// const PopUp = () => {
-//     const { isPop, setPop } = useAppContext();
 
-//     useEffect(() => {
-//         document.body.style.overflow = isPop ? "hidden" : "";
-//         return () => {
-//             document.body.style.overflow = "";
-//         };
-//     }, [isPop]);
+const PopBg = () => {
 
-//     return (
-//         <>
-//             <MdMoreVert
-//                 onClick={() => setPop(true)}
-//                 className="cursor-pointer my-auto"
-//                 size={20}
-//             />
+    const { isPop, setPop } = useAppContext()
 
-//             <AnimatePresence>
-//                 {isPop && (
-//                     <div
-//                         onClick={() => setPop(false)}
-//                         className='fixed inset-0 z-[1000] bg-[#00000010] flex justify-center items-center'
-//                     >
-//                         <motion.div
-//                             initial={{ opacity: 0, scale: 1.15 }}
-//                             animate={{ opacity: 1, scale: 1 }}
-//                             exit={{ opacity: 0, scale: 1.15 }}
-//                             transition={{ type: "tween", duration: 0.2 }}
-//                             className='bg-[#262626] w-[80%] md:w-[25em] rounded-3xl'
-//                             onClick={(e) => e.stopPropagation()}
-//                         >
-//                             {ITEMS.map((item, index) => (
-//                                 <div key={index}>
-//                                     {item == 'Report' ? 
-//                                         (<div className="flex justify-center py-3.5 cursor-pointer text-sm text-red-500">{item}</div>)
-//                                          : item == 'Follow' ? (<div className="flex justify-center py-3.5 cursor-pointer text-sm text-[#0095F6]">{item}</div>) :
-//                                         (<div className="flex justify-center py-3.5 cursor-pointer text-sm">{item}</div>)
-//                                     }
-//                                     {index !== ITEMS.length - 1 && (
-//                                         <hr className="border-t-2 border-[#c8c8c8] dark:border-[#2f2f2f]" />
-//                                     )}
-//                                 </div>
-//                             ))}
-//                         </motion.div>
-//                     </div>
-//                 )}
-//             </AnimatePresence>
-//         </>
-//     )
-// }
+    useEffect(() => {
+        document.body.style.overflow = isPop ? "hidden" : "";
+        return () => {
+            document.body.style.overflow = "";
+        };
+    }, [isPop]);
 
-// export default PopUp
+    return (
+        <AnimatePresence>
+            {isPop && (
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    onClick={() => setPop(false)}
+                    style={{ transform: "translateZ(0)" }}
+                    className="fixed inset-0 will-change-contents z-[1000] backdrop-blur-[5px] bg-[#00000050] flex justify-center items-center"
+                >
+                    <motion.div
+                        layout
+                        initial={{ scale: 1.2, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
+                        exit={{ scale: 1.2, opacity: 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="bg-[#262626] w-[80%] md:w-[25em] rounded-3xl will-change-transform"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <div className='flex justify-center py-3.5 cursor-pointer text-sm text-red-500'>Report</div>
+                        <hr className="border-t-2 border-[#c8c8c8] dark:border-[#2f2f2f]" />
+                        <div className='flex justify-center py-3.5 cursor-pointer text-sm text-[#0095F6]'>Follow</div>
+                        <hr className="border-t-2 border-[#c8c8c8] dark:border-[#2f2f2f]" />
+                        <div className='flex justify-center py-3.5 cursor-pointer text-sm'>Add to favorite</div>
+                        <hr className="border-t-2 border-[#c8c8c8] dark:border-[#2f2f2f]" />
+                        <div className='flex justify-center py-3.5 cursor-pointer text-sm'>Go to post</div>
+                        <hr className="border-t-2 border-[#c8c8c8] dark:border-[#2f2f2f]" />
+                        <div className='flex justify-center py-3.5 cursor-pointer text-sm'>Share to...</div>
+                        <hr className="border-t-2 border-[#c8c8c8] dark:border-[#2f2f2f]" />
+                        <div className='flex justify-center py-3.5 cursor-pointer text-sm'>Copy link</div>
+                        <hr className="border-t-2 border-[#c8c8c8] dark:border-[#2f2f2f]" />
+                        <div className='flex justify-center py-3.5 cursor-pointer text-sm'>About this account</div>
+                        <hr className="border-t-2 border-[#c8c8c8] dark:border-[#2f2f2f]" />
+                        <div onClick={() => setPop(false)} className='flex justify-center py-3.5 cursor-pointer text-sm'>Cancel</div>
+                    </motion.div>
+                </motion.div>
+            )}
+        </AnimatePresence>
+    )
+}
+
+export default PopBg
