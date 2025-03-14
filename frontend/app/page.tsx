@@ -47,7 +47,7 @@ const Post = () => {
                     <LuBookmark className="cursor-pointer" size={26} />
                 </div>
                 <div className="px-2">
-                    <p className="py-2 text-[0.9em] font-semibold cursor-pointer">44,832 likes</p>
+                    <p className="py-2 text-[0.9em] font-semibold select-none cursor-pointer">44,832 likes</p>
                     <p className="text-[0.8em] font-light cursor-pointer"><span className="font-semibold text-sm mr-2">shabinsharih</span>The highly anticipated follow up to one of our 2024 music videos of the year. EYECANDY FEATURE: HANUMANKIND - RUN IT...</p>
                     <p className="text-[#7a7a7a] text-[0.95em] my-2 cursor-pointer">View all 45 comments</p>
                     <input type="text" placeholder="Add a comment" className="placeholder-[#7a7a7a] text-[0.95em] outline-none bg-transparent" />
