@@ -5,12 +5,12 @@ import { FaHeart } from 'react-icons/fa6'
 
 import "./media.css"
 
-const Media = () => {
+const Media = ({ animateLike }: {animateLike: () => void}) => {
 
     const [isClick, setClick] = useState(false)
     const [random, setRandom] = useState('')
 
-    const animations: string[] = ['like-animation-1', 'like-animation-2', 'like-animation-3', 'like-animation-4', 'like-animation-5']
+    const animations: string[] = ['like-animation-1', 'like-animation-2', 'like-animation-3']
     let animation: number
 
     function showLike() {
@@ -18,6 +18,8 @@ const Media = () => {
         animation = Math.floor(Math.random() * animations.length);
         setRandom(animations[animation])
         setClick(true)
+        //changing like in the interaction section
+        animateLike()
 
         if (typeof window !== "undefined") {
             const isAndroid = /Android/i.test(navigator.userAgent);
