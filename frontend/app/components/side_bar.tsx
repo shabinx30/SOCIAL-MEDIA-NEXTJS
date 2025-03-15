@@ -1,15 +1,19 @@
 "use client"
 
 // icons
-import { MdOutlineExplore, MdExplore } from "react-icons/md";
+import { MdOutlineExplore, MdExplore, MdReport } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa";
 import { RiMessengerLine, RiMessengerFill } from "react-icons/ri";
 import { SiInstagram } from "react-icons/si";
 import { FaHeart } from "react-icons/fa6";
+import { LuBookmark, LuSquareActivity } from "react-icons/lu";
+import { IoMoonOutline } from "react-icons/io5";
 
 import Link from 'next/link'
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
 
 const menuItems = [
   { icon: "https://cdn-icons-png.flaticon.com/256/2932/2932143.png", label: "Home", isImg: true, href: "/" },
@@ -18,8 +22,8 @@ const menuItems = [
   { icon: "https://cdn-icons-png.flaticon.com/256/12595/12595880.png", label: "Reels", isImg: true, href: "/reels" },
   { icon: <RiMessengerLine size={30} />, label: "Messages", href: "/messages" },
   { icon: <FaRegHeart size={26} />, label: "Notifications", href: "/notifications" },
-  { icon: "https://cdn-icons-png.flaticon.com/256/10103/10103630.png", label: "Create", isImg: true, href: "/create" },
-  { icon: "https://cdn-icons-png.flaticon.com/256/18827/18827853.png", label: "Profile", isImg: true, href : "/shabinsharih" },
+  { icon: "https://cdn-icons-png.flaticon.com/256/10103/10103630.png", label: "Create", isImg: true, href: "" },
+  { icon: "https://cdn-icons-png.flaticon.com/256/18827/18827853.png", label: "Profile", isImg: true, href: "/shabinsharih" },
   { icon: "https://cdn-icons-png.flaticon.com/256/13894/13894991.png", label: "More", isImg: true, href: "/more" },
 ];
 
@@ -38,40 +42,138 @@ const activeMenuItems = [
 const Sidebar = () => {
 
   const CurrentRoute = usePathname()
-  
+  const [isMore, setMore] = useState(false)
+
   return (
     <>
       {/* Sidebar */}
       <div className="fixed h-screen md:w-[4.5rem] lg:w-[15.3em] bg-white dark:bg-black hidden md:block border-r border-[#DBDBDB] dark:border-[#2e2e2e]">
-        <Link href={'/'}>
-          <h2 className="select-none font-bold px-6 pt-9 text-[1.35rem] tracking-tight scale-x-90 scale-y-125 hidden lg:block">
-            𝒫𝒾𝓍𝒶𝑔𝓇𝒶𝓂
-          </h2>
-          <SiInstagram size={25} className="hidden md:block lg:hidden mx-6 mt-11 text-dark dark:text-white" />
-        </Link>
-        <div className="px-3 pt-10">
-          {menuItems.map(({ icon, label, isImg, href }, index) => (
-            <Link href={href} key={index}>
-              <div className="relative flex gap-5 items-center dark:active:brightness-50 dark:hover:bg-[#1A1A1A] hover:bg-[#F2F2F2] transition duration-200 px-2.5 py-[0.7em] rounded-lg mt-2">
-                {/* count */}
-                {href == '/messages' ? <div className="bg-[#FF3040] border-[3px] border-white dark:text-white dark:border-black z-10 left-6 top-[0.4rem] absolute w-[1.6em] h-[1.6em] flex justify-center items-center rounded-full text-sm font-mono">{3}</div> : <></>}
-                {CurrentRoute == href ? (
-                  activeMenuItems[index].isImg ? (
-                    <Image width={26} height={26} className="dark:invert w-[26px]" src={activeMenuItems[index].icon as string} alt={label} />
+        <div className="relative h-[100vh]">
+          <Link href={'/'}>
+            <h2 className="select-none font-bold px-6 pt-9 text-[1.35rem] tracking-tight scale-x-90 scale-y-125 hidden lg:block">
+              𝒫𝒾𝓍𝒶𝑔𝓇𝒶𝓂
+            </h2>
+            <SiInstagram size={25} className="hidden md:block lg:hidden mx-6 mt-11 text-dark dark:text-white" />
+          </Link>
+          <div className="px-3 pt-10 cursor-pointer">
+            {menuItems.map(({ icon, label, isImg, href }, index) => (
+              href === '/more' ? (
+                <div
+                  key={index}
+                  onClick={() => setMore(true)}
+                  className="relative flex gap-5 items-center dark:active:brightness-50 dark:hover:bg-[#1A1A1A] hover:bg-[#F2F2F2] transition duration-200 px-2.5 py-[0.7em] rounded-lg mt-2"
+                >
+                  {CurrentRoute === href ? (
+                    activeMenuItems[index].isImg ? (
+                      <Image
+                        width={26}
+                        height={26}
+                        className="dark:invert w-[26px]"
+                        src={activeMenuItems[index].icon as string}
+                        alt={label}
+                      />
+                    ) : (
+                      activeMenuItems[index].icon
+                    )
                   ) : (
-                    activeMenuItems[index].icon
-                  )
-                ) : (
-                  isImg ? (
-                    <Image width={26} height={26} className="dark:invert w-[26px]" src={icon as string} alt={label} />
-                  ) : (
-                    icon
-                  )
-                )}
-                <p className={`hidden lg:block ${CurrentRoute == href ? "font-bold" : "text-base"}`}>{label}</p>
-              </div>
-            </Link>
-          ))}
+                    isImg ? (
+                      <Image
+                        width={26}
+                        height={26}
+                        className="dark:invert w-[26px]"
+                        src={icon as string}
+                        alt={label}
+                      />
+                    ) : (
+                      icon
+                    )
+                  )}
+                  <p className={`hidden lg:block ${CurrentRoute === href ? "font-bold" : "text-base"}`}>{label}</p>
+                </div>
+              ) : (
+                <Link href={href} key={index}>
+                  <div className="relative flex gap-5 items-center dark:active:brightness-50 dark:hover:bg-[#1A1A1A] hover:bg-[#F2F2F2] transition duration-200 px-2.5 py-[0.7em] rounded-lg mt-2">
+                    {href === '/messages' && (
+                      <div className="bg-[#FF3040] border-[3px] border-white dark:text-white dark:border-black z-10 left-6 top-[0.4rem] absolute w-[1.6em] h-[1.6em] flex justify-center items-center rounded-full text-sm font-mono">
+                        {3}
+                      </div>
+                    )}
+                    {CurrentRoute === href ? (
+                      activeMenuItems[index].isImg ? (
+                        <Image
+                          width={26}
+                          height={26}
+                          className="dark:invert w-[26px]"
+                          src={activeMenuItems[index].icon as string}
+                          alt={label}
+                        />
+                      ) : (
+                        activeMenuItems[index].icon
+                      )
+                    ) : (
+                      isImg ? (
+                        <Image
+                          width={26}
+                          height={26}
+                          className="dark:invert w-[26px]"
+                          src={icon as string}
+                          alt={label}
+                        />
+                      ) : (
+                        icon
+                      )
+                    )}
+                    <p className={`hidden lg:block ${CurrentRoute === href ? "font-bold" : "text-base"}`}>{label}</p>
+                  </div>
+                </Link>
+              )
+            ))}
+          </div>
+
+          {/* pop up for settings */}
+          <AnimatePresence>
+            {isMore && (
+              <motion.div
+                initial={{ width: 0, height: 0, opacity: 0 }}
+                animate={{ width: '100%', height: '46%', opacity: 1 }}
+                exit={{ width: 0, height: 0, opacity: 0 }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+                onMouseLeave={() => setMore(false)}
+                className="absolute py-[0.4em] z-[1000] left-2 bottom-2 bg-[#262626] lg:w-[18em] rounded-2xl text-sm font-light">
+                <div className="mx-[0.4em] hover:bg-[#3d3d3d] duration-200 rounded-2xl px-2 py-4 flex pl-4 gap-3 items-center cursor-pointer">
+                  <Image
+                    className="dark:invert w-5 h-5"
+                    src="https://cdn-icons-png.flaticon.com/512/5693/5693241.png"
+                    alt="settings"
+                    width={12}
+                    height={12}
+                  />
+                  <p>Settings</p>
+                </div>
+                <div className="mx-[0.4em] hover:bg-[#3d3d3d] duration-200 rounded-2xl px-2 py-4 flex pl-4 gap-3 items-center cursor-pointer">
+                  <LuSquareActivity size={20} />
+                  <p>Your Activity</p>
+                </div>
+                <div className="mx-[0.4em] hover:bg-[#3d3d3d] duration-200 rounded-2xl px-2 py-4 flex pl-4 gap-3 items-center cursor-pointer">
+                  <LuBookmark size={20} />
+                  <p>Saved</p>
+                </div>
+                <div className="mx-[0.4em] hover:bg-[#3d3d3d] duration-200 rounded-2xl px-2 py-4 flex pl-4 gap-3 items-center cursor-pointer">
+                  <IoMoonOutline size={20} />
+                  <p>Switch preferences</p>
+                </div>
+                <div className="mx-[0.4em] mb-2 hover:bg-[#3d3d3d] duration-200 rounded-2xl px-2 py-4 flex pl-4 gap-3 items-center cursor-pointer">
+                  <MdReport size={20} />
+                  <p>Report a problem</p>
+                </div>
+                <hr className="border-t-2 border-[#c8c8c8] dark:border-[#3d3d3d]" />
+                <div className="mx-[0.4em] mt-2 hover:bg-[#3d3d3d] duration-200 rounded-2xl py-4 flex items-center justify-center cursor-pointer">
+                  <p className="text-red-500 font-semibold">Logout</p>
+                </div>
+              </motion.div>
+            )
+            }
+          </AnimatePresence>
         </div>
       </div>
 
@@ -87,12 +189,10 @@ const Sidebar = () => {
             {CurrentRoute == "/search" ? (<Image width={24} height={24} className="dark:invert w-[24px]" src={activeMenuItems[1].icon as string} alt={"Search"} />) : (<Image width={26} height={26} className="dark:invert w-[26px]" src={menuItems[1].icon as string} alt={"Search"} />)}
           </Link>
           {/* Create */}
-          <Link href={'/create'}>
-            {CurrentRoute == "/create" ? (<Image width={24} height={24} className="dark:invert w-[24px]" src={activeMenuItems[6].icon as string} alt={"Create"} />) : (<Image width={26} height={26} className="dark:invert w-[26px]" src={menuItems[6].icon as string} alt={"Create"} />)} 
-          </Link>
+          {CurrentRoute == "/create" ? (<Image width={24} height={24} className="dark:invert w-[24px] cursor-pointer" src={activeMenuItems[6].icon as string} alt={"Create"} />) : (<Image width={26} height={26} className="dark:invert w-[26px] cursor-pointer" src={menuItems[6].icon as string} alt={"Create"} />)}
           {/* Reels */}
           <Link href={'/reels'}>
-            {CurrentRoute == "/reels" ? (<Image width={26} height={26} className="dark:invert w-[26px]" src={activeMenuItems[3].icon as string} alt= {"Reels"} />) : (<Image width={26} height={26} className="dark:invert w-[26px]" src={menuItems[3].icon as string} alt={"Reels"} />)}
+            {CurrentRoute == "/reels" ? (<Image width={26} height={26} className="dark:invert w-[26px]" src={activeMenuItems[3].icon as string} alt={"Reels"} />) : (<Image width={26} height={26} className="dark:invert w-[26px]" src={menuItems[3].icon as string} alt={"Reels"} />)}
           </Link>
           {/* Profile */}
           <Link href={'/shabinsharih'}>

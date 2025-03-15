@@ -1,5 +1,5 @@
 .like-animation-1 {
-    animation: fadeOut-1 1s ease-in-out forwards;
+    animation: fadeOut-1 0.8s ease-in-out forwards;
 }
 
 @keyframes fadeOut-1 {
@@ -35,7 +35,7 @@
 }
 
 .like-animation-2 {
-    animation: fadeOut-2 1s ease-in-out forwards;
+    animation: fadeOut-2 0.8s ease-in-out forwards;
 }
 
 @keyframes fadeOut-2 {
@@ -71,7 +71,7 @@
 }
 
 .like-animation-3 {
-    animation: fadeOut-3 1s ease-in-out forwards;
+    animation: fadeOut-3 0.8s ease-in-out forwards;
 }
 
 @keyframes fadeOut-3 {
