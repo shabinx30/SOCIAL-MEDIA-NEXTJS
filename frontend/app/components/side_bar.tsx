@@ -135,11 +135,11 @@ const Sidebar = () => {
             {isMore && (
               <motion.div
                 initial={{ width: 0, height: 0, opacity: 0 }}
-                animate={{ width: '100%', height: '46%', opacity: 1 }}
+                animate={{ width: '18em', height: '46%', opacity: 1 }}
                 exit={{ width: 0, height: 0, opacity: 0 }}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 onMouseLeave={() => setMore(false)}
-                className="absolute py-[0.4em] z-[1000] left-2 bottom-2 bg-[#262626] lg:w-[18em] rounded-2xl text-sm font-light">
+                className="absolute py-[0.4em] z-[1000] left-2 lg:bottom-2 md:bottom-[3.49em] bg-[#262626] lg:w-[18em] rounded-2xl text-sm font-light">
                 <div className="mx-[0.4em] hover:bg-[#3d3d3d] duration-200 rounded-2xl px-2 py-4 flex pl-4 gap-3 items-center cursor-pointer">
                   <Image
                     className="dark:invert w-5 h-5"

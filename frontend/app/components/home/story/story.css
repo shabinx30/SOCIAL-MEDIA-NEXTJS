@@ -24,7 +24,7 @@
 
 /* Apply animations to elements */
 .expanding-div {
-  animation: expandFromOrigin 0.5s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  animation: expandFromOrigin 0.25s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
   transform-origin: center;
   will-change: transform, border-radius;
 }
