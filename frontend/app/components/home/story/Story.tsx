@@ -70,12 +70,7 @@ const Story: React.FC = () => {
                     } : {}}
                 >
                     {/* Optional content for expanded state */}
-                    {/* {isExpanded && (
-                        <div className="p-6 opacity-0 animate-fadeIn">
-                            <h2 className="text-white text-xl font-bold">Your Story</h2>
-                            <p className="text-white mt-2">This is the expanded content of your story.</p>
-                        </div>
-                    )} */}
+                    
                 </div>
             </div>
         </div>

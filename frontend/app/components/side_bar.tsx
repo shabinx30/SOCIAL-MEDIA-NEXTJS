@@ -139,8 +139,8 @@ const Sidebar = () => {
                 exit={{ width: 0, height: 0, opacity: 0 }}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 onMouseLeave={() => setMore(false)}
-                className="absolute py-[0.4em] z-[1000] left-2 lg:bottom-2 md:bottom-[3.49em] bg-[#262626] lg:w-[18em] rounded-2xl text-sm font-light">
-                <div className="mx-[0.4em] hover:bg-[#3d3d3d] duration-200 rounded-2xl px-2 py-4 flex pl-4 gap-3 items-center cursor-pointer">
+                className="absolute py-[0.4em] z-[1000] left-2 lg:bottom-2 md:bottom-[3.49em] bg-[#C8C8C8] dark:bg-[#262626] lg:w-[18em] rounded-2xl text-sm font-light">
+                <div className="mx-[0.4em] dark:hover:bg-[#3d3d3d] hover:bg-[#939393] duration-200 rounded-2xl px-2 py-4 flex pl-4 gap-3 items-center cursor-pointer">
                   <Image
                     className="dark:invert w-5 h-5"
                     src="https://cdn-icons-png.flaticon.com/512/5693/5693241.png"
@@ -150,24 +150,24 @@ const Sidebar = () => {
                   />
                   <p>Settings</p>
                 </div>
-                <div className="mx-[0.4em] hover:bg-[#3d3d3d] duration-200 rounded-2xl px-2 py-4 flex pl-4 gap-3 items-center cursor-pointer">
+                <div className="mx-[0.4em] dark:hover:bg-[#3d3d3d] hover:bg-[#939393] duration-200 rounded-2xl px-2 py-4 flex pl-4 gap-3 items-center cursor-pointer">
                   <LuSquareActivity size={20} />
                   <p>Your Activity</p>
                 </div>
-                <div className="mx-[0.4em] hover:bg-[#3d3d3d] duration-200 rounded-2xl px-2 py-4 flex pl-4 gap-3 items-center cursor-pointer">
+                <div className="mx-[0.4em] dark:hover:bg-[#3d3d3d] hover:bg-[#939393] duration-200 rounded-2xl px-2 py-4 flex pl-4 gap-3 items-center cursor-pointer">
                   <LuBookmark size={20} />
                   <p>Saved</p>
                 </div>
-                <div className="mx-[0.4em] hover:bg-[#3d3d3d] duration-200 rounded-2xl px-2 py-4 flex pl-4 gap-3 items-center cursor-pointer">
+                <div className="mx-[0.4em] dark:hover:bg-[#3d3d3d] hover:bg-[#939393] duration-200 rounded-2xl px-2 py-4 flex pl-4 gap-3 items-center cursor-pointer">
                   <IoMoonOutline size={20} />
                   <p>Switch preferences</p>
                 </div>
-                <div className="mx-[0.4em] mb-2 hover:bg-[#3d3d3d] duration-200 rounded-2xl px-2 py-4 flex pl-4 gap-3 items-center cursor-pointer">
+                <div className="mx-[0.4em] mb-2 dark:hover:bg-[#3d3d3d] hover:bg-[#939393] duration-200 rounded-2xl px-2 py-4 flex pl-4 gap-3 items-center cursor-pointer">
                   <MdReport size={20} />
                   <p>Report a problem</p>
                 </div>
-                <hr className="border-t-2 border-[#c8c8c8] dark:border-[#3d3d3d]" />
-                <div className="mx-[0.4em] mt-2 hover:bg-[#3d3d3d] duration-200 rounded-2xl py-4 flex items-center justify-center cursor-pointer">
+                <hr className="border-t-2 border-[#ffffff] dark:border-[#3d3d3d]" />
+                <div className="mx-[0.4em] mt-2 dark:hover:bg-[#3d3d3d] hover:bg-[#939393] duration-200 rounded-2xl py-4 flex items-center justify-center cursor-pointer">
                   <p className="text-red-500 font-semibold">Logout</p>
                 </div>
               </motion.div>
