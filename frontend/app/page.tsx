@@ -93,7 +93,7 @@ const Home = () => {
                         ))}
 
                         {/* Loading Indicator */}
-                        {loading && <div className="flex justify-center py-[5em]"><CgSpinner className="animate-spin"/></div>}
+                        {loading && <div className="flex justify-center py-[5em]"><CgSpinner size={30} className="animate-spin"/></div>}
 
                         {/* Invisible Element for Observer */}
                         <div ref={observerRef} style={{ height: '10px' }} />
