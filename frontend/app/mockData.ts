@@ -1,0 +1,1 @@
+export const mockPosts = Array.from({ length: 50 }, (_, i) => `Post ${i + 1}`);
