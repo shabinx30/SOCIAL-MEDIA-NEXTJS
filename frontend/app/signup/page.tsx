@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link";
 import React, { useState } from "react";
 import { FaFacebook } from "react-icons/fa";
 
@@ -104,7 +105,9 @@ const Signup = () => {
         </div>
         <div className="w-80 h-10 border border-gray-500 text-xs flex items-center justify-center rounded">
           Have an account?{" "}
-          <span className="text-blue-500 text-sm cursor-pointer">Log in</span>
+          <Link href={'/login'}>
+            <span className="text-blue-500 text-sm cursor-pointer">Log in</span>
+          </Link>
         </div>
       </div>
     </div>
