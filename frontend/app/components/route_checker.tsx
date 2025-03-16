@@ -7,7 +7,7 @@ import Sidebar from "./side_bar";
 const RouteChecker = ({ children }: { children: React.ReactNode }) => {
   const CurrentRoute = usePathname();
 
-  if (CurrentRoute === "/Login" || CurrentRoute === "/signup") {
+  if (CurrentRoute === "/login" || CurrentRoute === "/signup") {
     return <>{children}</>
   }
 
