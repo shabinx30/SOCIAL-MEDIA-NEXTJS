@@ -2,8 +2,12 @@
 
 import { useState, useRef, useEffect } from "react"
 import "./story.css"
+import { useRouter } from "next/navigation"
 
 const Story: React.FC = () => {
+
+    const router = useRouter()
+
     const [isExpanded, setIsExpanded] = useState<boolean>(false)
     const [position, setPosition] = useState<{ top: number, left: number, width: number, height: number }>({ 
         top: 0, 
@@ -33,6 +37,9 @@ const Story: React.FC = () => {
             // Expand
             setPosition(capturePosition())
             setIsExpanded(true)
+
+            //routing to stories page
+            router.push('/stories')
         } else {
             // Immediately close without animation
             setIsExpanded(false)

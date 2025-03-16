@@ -108,13 +108,11 @@ const Home = () => {
                                 <p className="text-[#a1a1a1] text-sm">SHABIN</p>
                             </div>
                         </div>
-                        <div className="my-auto">
-                            <p className="text-[#0095F6] text-sm">Switch</p>
-                        </div>
+                        <p className="text-[#0095F6] text-sm my-auto cursor-pointer">Switch</p>
                     </div>
                     <div className="flex justify-between text-sm font-semibold pt-8">
                         <p className="text-[#a1a1a1]">Suggested for you</p>
-                        <p>See All</p>
+                        <p className="cursor-pointer">See All</p>
                     </div>
                 </div>
             </div>

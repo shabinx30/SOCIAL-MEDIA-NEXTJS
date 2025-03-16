@@ -8,6 +8,7 @@
   100% {
     transform: scale(1);
     border-radius: 0;
+    background-color: #1A1A1A;
   }
 }
 
