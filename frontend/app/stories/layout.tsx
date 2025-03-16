@@ -1,13 +1,16 @@
+// "use client"
+
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import React from 'react'
-import Head from 'next/head'
+
+export const metadata: Metadata = {
+    title: 'Stories • Pixagram',
+};
 
 const layout = ({children}: {children: React.ReactNode}) => {
     return (
         <>
-            <Head>
-                <title>Stories • Pixagram</title>
-            </Head>
             <div className='flex bg-[#1A1A1A] w-screen h-[100dvh]'>
                 <div className='flex-1 justify-start'>
                     <Link href={'/'}>

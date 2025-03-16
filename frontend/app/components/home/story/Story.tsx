@@ -39,7 +39,9 @@ const Story: React.FC = () => {
             setIsExpanded(true)
 
             //routing to stories page
-            router.push('/stories')
+            setTimeout(() => {
+                router.push('/stories')
+            }, 200);
         } else {
             // Immediately close without animation
             setIsExpanded(false)
