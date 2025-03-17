@@ -13,9 +13,14 @@ const Stories = () => {
         setCount(Number(newQuery));
     };
 
-    const scrollStory = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const scrollStoryRight = (e: React.MouseEvent<HTMLButtonElement>) => {
         setCount(count + 1);
         e.currentTarget.parentElement?.parentElement?.scrollBy({ left: 270, behavior: 'smooth' });
+    };
+
+    const scrollStoryLeft = (e: React.MouseEvent<HTMLButtonElement>) => {
+        setCount(count - 1);
+        e.currentTarget.parentElement?.parentElement?.scrollBy({ left: -270, behavior: 'smooth' });
     };
 
     return (
@@ -23,7 +28,8 @@ const Stories = () => {
             <StoriesContent 
                 count={count} 
                 handleQueryChange={handleQueryChange} 
-                scrollStory={scrollStory} 
+                scrollStoryRight={scrollStoryRight}
+                scrollStoryLeft={scrollStoryLeft}
             />
         </Suspense>
     );
@@ -34,10 +40,11 @@ const Stories = () => {
 interface StoriesContentType {
     count: number; 
     handleQueryChange: (newQuery: string) => void; 
-    scrollStory: (e: React.MouseEvent<HTMLButtonElement>) => void
+    scrollStoryRight: (e: React.MouseEvent<HTMLButtonElement>) => void
+    scrollStoryLeft: (e: React.MouseEvent<HTMLButtonElement>) => void
 }
 
-const StoriesContent = ({ count, handleQueryChange, scrollStory }: StoriesContentType) => {
+const StoriesContent = ({ count, handleQueryChange, scrollStoryRight, scrollStoryLeft }: StoriesContentType) => {
     const router = useRouter();
     const searchParams = useSearchParams();
     const searchQuery = searchParams.get('id');
@@ -46,19 +53,23 @@ const StoriesContent = ({ count, handleQueryChange, scrollStory }: StoriesConten
         router.push(`?id=${count}`, { scroll: false });
     }, [count]);
 
+    const arr = ['1', '2', '3', '4', '5', '6']
+
     return (
         <div className="flex justify-center gap-12 pl-[90%] items-center w-[100vw] h-[100vh] scrollbar-hide overflow-x-auto whitespace-nowrap min-w-full">
-            {['1', '2', '3', '4', '5', '6'].map((route, index) => (
-                <div key={index} className="inline-flex h-full items-center gap-4 ">
+            {arr.map((route, index) => (
+                <div key={index} className="flex h-full items-center gap-4 justify-center">
+                    {count > 1 && <button onClick={(e) => scrollStoryLeft(e)} className="p-3 absolute left-[33%] bg-gray-300 text-black rounded-full">&lt;</button>}
                     <div
                         onClick={() => handleQueryChange(route)}
                         className={`${route === searchQuery
                             ? 'w-[24em] h-[92vh]'
                             : 'w-[14em] h-[52vh]'
                             } bg-[#282828] rounded-2xl transition-all duration-500 ease-in-out`}
-                    />
-
-                    <button onClick={(e) => scrollStory(e)} className="p-3 absolute right-[35%] bg-gray-300 text-black rounded-full">&gt;</button>
+                    >
+                        {index}
+                    </div>
+                    {count < arr.length && <button onClick={(e) => scrollStoryRight(e)} className="p-3 absolute right-[35%] bg-gray-300 text-black rounded-full">&gt;</button>}
                 </div>
             ))}
         </div>
