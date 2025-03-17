@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react"
 import "./story.css"
 import { useRouter } from "next/navigation"
 
-const Story: React.FC = () => {
+const Story = ({id}: {id: string}) => {
 
     const router = useRouter()
 
@@ -40,7 +40,7 @@ const Story: React.FC = () => {
 
             //routing to stories page
             setTimeout(() => {
-                router.push('/stories')
+                router.push(`/stories?id=${'1'}`)
             }, 200);
         } else {
             // Immediately close without animation

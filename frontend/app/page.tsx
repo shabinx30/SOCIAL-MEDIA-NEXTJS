@@ -28,7 +28,7 @@ const Home = () => {
 
     const { isPop } = useAppContext()
 
-    const arr: number[] = [12, 3, 4, 5, 6, 7, 8, 9, 10]
+    const arr: string[] = ['john', 'alex', 'nothing', 'samsung', 'iphone', 'xiomi', 'oneplus', 'poco', 'iqoo']
 
     const [posts, setPosts] = useState<string[]>(mockPosts.slice(0, 5)); // Load initial posts
     const [page, setPage] = useState(1);
@@ -85,7 +85,7 @@ const Home = () => {
             <div className="flex md:pt-6">
                 <div className="block w-full lg:w-[65%]">
                     <div className="inline-block w-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide px-2">
-                        {arr.map((_, index) => <Story key={index} />)}
+                        {arr.map((id, index) => <Story key={index} id={id} />)}
                     </div>
                     <div>
                         {posts.map((_, index) => (
