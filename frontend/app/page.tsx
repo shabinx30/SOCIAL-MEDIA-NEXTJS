@@ -85,7 +85,7 @@ const Home = () => {
             <div className="flex md:pt-6">
                 <div className="block w-full lg:w-[65%]">
                     <div className="inline-block w-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide px-2">
-                        {arr.map((id, index) => <Story key={index} id={id} />)}
+                        {arr.map((id, index) => <Story key={index} />)}
                     </div>
                     <div>
                         {posts.map((_, index) => (

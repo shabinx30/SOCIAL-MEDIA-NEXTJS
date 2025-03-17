@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react"
 import "./story.css"
 import { useRouter } from "next/navigation"
 
-const Story = ({id}: {id: string}) => {
+const Story = () => {
 
     const router = useRouter()
 
