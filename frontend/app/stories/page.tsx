@@ -15,12 +15,12 @@ const Stories = () => {
 
     const scrollStoryRight = (e: React.MouseEvent<HTMLButtonElement>) => {
         setCount(count + 1);
-        e.currentTarget.parentElement?.parentElement?.scrollBy({ left: 270, behavior: 'smooth' });
+        e.currentTarget.parentElement?.parentElement?.scrollBy({ left: 245, behavior: 'smooth' });
     };
 
     const scrollStoryLeft = (e: React.MouseEvent<HTMLButtonElement>) => {
         setCount(count - 1);
-        e.currentTarget.parentElement?.parentElement?.scrollBy({ left: -270, behavior: 'smooth' });
+        e.currentTarget.parentElement?.parentElement?.scrollBy({ left: -245, behavior: 'smooth' });
     };
 
     return (
@@ -56,11 +56,14 @@ const StoriesContent = ({ count, handleQueryChange, scrollStoryRight, scrollStor
     const arr = ['1', '2', '3', '4', '5', '6']
 
     return (
-        <div className="flex justify-center gap-12 pl-[90%] items-center w-[100vw] h-[100vh] scrollbar-hide overflow-x-auto whitespace-nowrap min-w-full">
+        <div className="flex justify-center gap-12 pl-[80%] items-center w-[100vw] h-[100vh] scrollbar-hide overflow-x-auto whitespace-nowrap min-w-full">
+            <div className="flex h-full items-center gap-4 justify-center px-[35em]">
             {arr.map((route, index) => (
-                <div key={index} className="flex h-full items-center gap-4 justify-center">
+                    <>
+                        {/* previous */}
                     {count > 1 && <button onClick={(e) => scrollStoryLeft(e)} className="p-3 absolute left-[33%] bg-gray-300 text-black rounded-full">&lt;</button>}
                     <div
+                        id={index+''}
                         onClick={() => handleQueryChange(route)}
                         className={`${route === searchQuery
                             ? 'w-[24em] h-[92vh]'
@@ -69,9 +72,11 @@ const StoriesContent = ({ count, handleQueryChange, scrollStoryRight, scrollStor
                     >
                         {index}
                     </div>
+                    {/* next */}
                     {count < arr.length && <button onClick={(e) => scrollStoryRight(e)} className="p-3 absolute right-[35%] bg-gray-300 text-black rounded-full">&gt;</button>}
+                    </>
+                ))}
                 </div>
-            ))}
         </div>
     );
 };
