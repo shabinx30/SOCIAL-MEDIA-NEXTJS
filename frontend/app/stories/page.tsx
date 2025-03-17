@@ -29,7 +29,15 @@ const Stories = () => {
     );
 };
 
-const StoriesContent = ({ count, handleQueryChange, scrollStory }: any) => {
+
+//types for story content
+interface StoriesContentType {
+    count: number; 
+    handleQueryChange: (newQuery: string) => void; 
+    scrollStory: (e: React.MouseEvent<HTMLButtonElement>) => void
+}
+
+const StoriesContent = ({ count, handleQueryChange, scrollStory }: StoriesContentType) => {
     const router = useRouter();
     const searchParams = useSearchParams();
     const searchQuery = searchParams.get('id');
