@@ -6,9 +6,7 @@ import { useEffect, useState } from 'react';
 
 const Stories = () => {
     const router = useRouter();
-    const searchParams = useSearchParams();
-    const searchQuery = searchParams.get('id');
-    const [count, setCount] = useState(Number(searchQuery) + 1);
+    const [count, setCount] = useState(1);
 
     const handleQueryChange = (newQuery: string) => {
         router.push(`?id=${newQuery}`, { scroll: false });
