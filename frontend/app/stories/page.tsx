@@ -6,7 +6,9 @@ import { useEffect, useState } from 'react';
 
 const Stories = () => {
     const router = useRouter();
-    const [count, setCount] = useState(1);
+    const searchParams = useSearchParams();
+    const searchQuery = searchParams.get('id');
+    const [count, setCount] = useState(Number(searchQuery) + 1);
 
     const handleQueryChange = (newQuery: string) => {
         router.push(`?id=${newQuery}`, { scroll: false });
@@ -58,25 +60,25 @@ const StoriesContent = ({ count, handleQueryChange, scrollStoryRight, scrollStor
     return (
         <div className="flex justify-center gap-12 pl-[80%] items-center w-[100vw] h-[100vh] scrollbar-hide overflow-x-auto whitespace-nowrap min-w-full">
             <div className="flex h-full items-center gap-4 justify-center px-[35em]">
-            {arr.map((route, index) => (
-                    <>
+                {count > 1 && <button onClick={(e) => scrollStoryLeft(e)} className="p-3 absolute left-[33%] bg-gray-300 text-black rounded-full">&lt;</button>}
+                {arr.map((route, index) => (
+                    <div key={index}>
                         {/* previous */}
-                    {count > 1 && <button onClick={(e) => scrollStoryLeft(e)} className="p-3 absolute left-[33%] bg-gray-300 text-black rounded-full">&lt;</button>}
-                    <div
-                        id={index+''}
-                        onClick={() => handleQueryChange(route)}
-                        className={`${route === searchQuery
-                            ? 'w-[24em] h-[92vh]'
-                            : 'w-[14em] h-[52vh]'
-                            } bg-[#282828] rounded-2xl transition-all duration-500 ease-in-out`}
-                    >
-                        {index}
+                        <div
+                            id={index+''}
+                            onClick={() => handleQueryChange(route)}
+                            className={`${route === searchQuery
+                                ? 'w-[24em] h-[92vh]'
+                                : 'w-[14em] h-[52vh]'
+                                } bg-[#282828] rounded-2xl transition-all duration-500 ease-in-out`}
+                        >
+                            {index}
+                        </div>
+                        {/* next */}
                     </div>
-                    {/* next */}
-                    {count < arr.length && <button onClick={(e) => scrollStoryRight(e)} className="p-3 absolute right-[35%] bg-gray-300 text-black rounded-full">&gt;</button>}
-                    </>
                 ))}
-                </div>
+                {count < arr.length && <button onClick={(e) => scrollStoryRight(e)} className="p-3 absolute right-[35%] bg-gray-300 text-black rounded-full">&gt;</button>}
+            </div>
         </div>
     );
 };
