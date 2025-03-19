@@ -6,7 +6,7 @@
     width: var(--storyWidth);
     height: 76vh;
     perspective: 60em;
-    padding-bottom: 3em;
+    /* padding-bottom: 3em; */
 }
 
 .cube {
