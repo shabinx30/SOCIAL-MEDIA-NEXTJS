@@ -6,7 +6,7 @@ import { PiCameraLight } from "react-icons/pi";
 
 const PostsPage = () => {
 
-    const [count, setCount] = useState(Math.floor(Math.random() * 1000))
+    const [count] = useState(Math.floor(Math.random() * 1000))
 
     const posts: object[] = []
 
