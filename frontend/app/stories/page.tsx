@@ -3,6 +3,11 @@
 import { Suspense, useRef, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
+
+// icons
+import { GrFormPrevious } from "react-icons/gr";
+import { GrFormNext } from "react-icons/gr";
+
 // Minimal top-level component
 const Stories = () => {
     return (
@@ -47,7 +52,7 @@ const StoriesContent = () => {
                 left: scrollPosition,
                 behavior: "smooth",
             });
-        }, 500); // Matches transition duration
+        }, 350); // Matches transition duration
     };
 
     const handleNext = () => {
@@ -61,6 +66,33 @@ const StoriesContent = () => {
             setCount((prev) => prev - 1);
         }
     };
+
+    useEffect(() => {
+        const handleKeyEvents = (e: KeyboardEvent) => {
+            switch (e.key) {
+                case 'ArrowLeft':
+                    handlePrev()
+                    break;
+                case 'ArrowRight':
+                    handleNext()
+                    break;
+                case 'ArrowUp':
+                    handlePrev()
+                    break;
+                case 'ArrowDown':
+                    handleNext()
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        window.addEventListener('keydown', handleKeyEvents)
+
+        return () => {
+            window.removeEventListener('keydown', handleKeyEvents)
+        }
+    }, [handleNext, handlePrev])
 
     return (
         <div className="w-[100vw] h-[100vh] overflow-hidden relative">
@@ -76,25 +108,25 @@ const StoriesContent = () => {
                             storyRefs.current[index] = el;
                         }}
                         onClick={() => setCount(index)}
-                        className={`${index === count ? "w-[24em] h-[92vh]" : "w-[14em] h-[52vh]"} bg-[#282828] flex justify-center items-center rounded-2xl transition-all duration-500 ease-in-out flex-shrink-0`}
+                        className={`${index === count ? "w-[24em] h-[92vh]" : "w-[14em] h-[52vh]"} bg-[#282828] flex justify-center items-center rounded-2xl transition-all duration-[350ms] ease-in-out flex-shrink-0`}
                     >
                         <p className="text-[#E8174B]">{content}</p>
                     </div>
                 ))}
             </div>
             <button
-                className="fixed left-4 top-1/2 transform -translate-y-1/2 p-3 bg-gray-300 text-black rounded-full disabled:opacity-50 z-20"
+                className="fixed left-1/3 top-1/2 transform translate-x-1/2 -translate-y-1/2 p-1.5 font-black bg-[#515151] text-white rounded-full disabled:opacity-50 z-20"
                 onClick={handlePrev}
                 disabled={count === 0}
             >
-                &lt;
+                <GrFormPrevious size={20}/>
             </button>
             <button
-                className="fixed right-4 top-1/2 transform -translate-y-1/2 p-3 bg-gray-300 text-black rounded-full disabled:opacity-50 z-20"
+                className="fixed right-1/3 top-1/2 transform -translate-x-1/2 -translate-y-1/2 p-1.5 font-black bg-[#515151] text-white rounded-full disabled:opacity-50 z-20"
                 onClick={handleNext}
                 disabled={count === arr.length - 1}
-            >
-                &gt;
+                >
+                <GrFormNext size={20}/>
             </button>
         </div>
     );
