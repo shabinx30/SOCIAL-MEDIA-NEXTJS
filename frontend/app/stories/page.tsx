@@ -85,8 +85,7 @@ const StoriesContent = ({ count, setCount }: StoriesContentType) => {
                         className={`${index === count ? "w-[24em] h-[92vh]" : "w-[14em] h-[52vh]"
                             } bg-[#282828] rounded-2xl transition-all duration-500 ease-in-out flex-shrink-0`}
                     >
-                        <p>{index}</p>
-                        <p>{route}</p>
+                        <p>{index}{route}</p>
                     </div>
                 ))}
             </div>
