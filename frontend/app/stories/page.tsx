@@ -3,6 +3,7 @@
 import { Suspense, useRef, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { GrFormPrevious, GrFormNext } from "react-icons/gr";
+import MobileStory from '../components/stories/MobileStory'
 
 const Stories = () => {
     return (
@@ -110,40 +111,43 @@ const StoriesContent = () => {
     }, [count]);
 
     return (
-        <div className="w-[100vw] h-[100vh] overflow-hidden relative">
-            <div className="absolute w-[30%] h-full z-10 bg-gradient-to-r from-black/50"></div>
-            <div className="absolute right-0 w-[30%] h-full z-10 bg-gradient-to-l from-black/50"></div>
-            <div
-                ref={containerRef}
-                className="flex h-full md:px-[26%] lg:px-[37%] items-center gap-12 justify-start overflow-x-hidden scrollbar-hide whitespace-nowrap"
-            >
-                {arr.map((content, index) => (
-                    <div
-                        key={index}
-                        id={index + ""}
-                        ref={(el) => { storyRefs.current[index] = el }}
-                        onClick={() => setCount(index)}
-                        className={`${index === count ? "w-[24em] h-[92vh] z-20" : "w-[14em] h-[52vh] z-0"} bg-[#282828] relative flex justify-center items-center rounded-2xl transition-all duration-[500ms] ease-in-out flex-shrink-0`}
-                    >
-                        <p className="text-[#E8174B]">{content}</p>
-                    </div>
-                ))}
+        <>
+            <div className="hidden md:block w-[100vw] h-[100vh] overflow-hidden relative">
+                <div className="absolute w-[30%] h-full z-10 bg-gradient-to-r from-black/50"></div>
+                <div className="absolute right-0 w-[30%] h-full z-10 bg-gradient-to-l from-black/50"></div>
+                <div
+                    ref={containerRef}
+                    className="flex h-full md:px-[26%] lg:px-[37%] items-center gap-12 justify-start overflow-x-hidden scrollbar-hide whitespace-nowrap"
+                >
+                    {arr.map((content, index) => (
+                        <div
+                            key={index}
+                            id={index + ""}
+                            ref={(el) => { storyRefs.current[index] = el }}
+                            onClick={() => setCount(index)}
+                            className={`${index === count ? "w-[24em] h-[92vh] z-20" : "w-[14em] h-[52vh] z-0"} bg-[#282828] relative flex justify-center items-center rounded-2xl transition-all duration-[500ms] ease-in-out flex-shrink-0`}
+                        >
+                            <p className="text-[#E8174B]">{content}</p>
+                        </div>
+                    ))}
+                </div>
+                <button
+                    className="fixed left-4 top-1/2 transform -translate-y-1/2 p-1.5 bg-[#515151] text-white rounded-full disabled:opacity-50 z-50 hidden lg:block"
+                    onClick={handlePrev}
+                    disabled={count === 0}
+                >
+                    <GrFormPrevious size={20} />
+                </button>
+                <button
+                    className="fixed right-4 top-1/2 transform -translate-y-1/2 p-1.5 bg-[#515151] text-white rounded-full disabled:opacity-50 z-50 hidden lg:block"
+                    onClick={handleNext}
+                    disabled={count === arr.length - 1}
+                >
+                    <GrFormNext size={20} />
+                </button>
             </div>
-            <button
-                className="fixed left-4 top-1/2 transform -translate-y-1/2 p-1.5 bg-[#515151] text-white rounded-full disabled:opacity-50 z-50 hidden lg:block"
-                onClick={handlePrev}
-                disabled={count === 0}
-            >
-                <GrFormPrevious size={20} />
-            </button>
-            <button
-                className="fixed right-4 top-1/2 transform -translate-y-1/2 p-1.5 bg-[#515151] text-white rounded-full disabled:opacity-50 z-50 hidden lg:block"
-                onClick={handleNext}
-                disabled={count === arr.length - 1}
-            >
-                <GrFormNext size={20} />
-            </button>
-        </div>
+            <MobileStory/>
+        </>
     );
 };
 
