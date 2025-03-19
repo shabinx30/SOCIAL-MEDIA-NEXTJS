@@ -18,6 +18,7 @@ const Post = () => {
     const { isPop, setPop } = useAppContext();
     const [like, setAnimate] = useState('mini-like-ani')
     const [isLike, setLike] = useState(false)
+    const [isFollow, setFollow] = useState(false)
 
     function animateLike() {
         setAnimate('mini-like-ani')
@@ -39,21 +40,29 @@ const Post = () => {
                         </div>
                     </div>
                     <div className="flex gap-4 h-[2em]">
-                        <button className="px-5 py-1 bg-[#efefef] hover:bg-[#DBDBDB] dark:bg-[#333333] rounded-lg dark:hover:bg-[#262626] text-sm duration-150">
+
+                        {/* follow & unfollow */}
+                        {isFollow ? 
+                        (<button onClick={() => setFollow(false)} className="px-5 py-1 bg-[#efefef] hover:bg-[#DBDBDB] dark:bg-[#333333] rounded-lg dark:hover:bg-[#262626] text-sm duration-150">
+                            Following
+                        </button>) 
+                            : 
+                        (<button onClick={() => setFollow(true)} className="px-5 py-1 bg-[#efefef] hover:bg-[#DBDBDB] dark:bg-[#333333] rounded-lg dark:hover:bg-[#262626] text-sm duration-150">
                             Follow
-                        </button>
+                        </button>)}
+
+                        {/* more button */}
                         <MdMoreVert
                             onClick={() => setPop(true)}
                             className="cursor-pointer my-auto"
                             size={20}
                         />
-
-
                     </div>
                 </div>
                 <Media animateLike={animateLike} />
                 <div className="flex justify-between pt-3 px-2">
                     <div className="flex gap-4 cursor-pointer">
+                        
                         {/* like */}
                         {isLike ?
                             <FaHeart size={26} className={`text-[#E8174B] ${like}`} onClick={() => setLike(false)} />
