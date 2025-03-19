@@ -18,6 +18,12 @@ export const metadata: Metadata = {
   other: {
     "google": "notranslate",  // Prevents translation
   },
+  openGraph: {
+    title: 'Instagram Clone',
+    description: 'A social media platform for sharing photos and videos',
+    // images: ['/path/to/image.jpg'],
+    url: './favicon.ico',
+  },
 };
 
 //cheking the route
