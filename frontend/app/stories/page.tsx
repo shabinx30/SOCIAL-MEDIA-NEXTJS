@@ -4,7 +4,6 @@ import { Suspense, useRef, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
 const Stories = () => {
-    const router = useRouter();
     const searchParams = useSearchParams();
     const [count, setCount] = useState(() => {
         const id = searchParams.get("id");
@@ -74,7 +73,7 @@ const StoriesContent = ({ count, setCount }: StoriesContentType) => {
                 ref={containerRef}
                 className="flex h-full px-[34em] items-center gap-8 justify-start overflow-x-hidden scrollbar-hide whitespace-nowrap"
             >
-                {arr.map((route, index) => (
+                {arr.map((content, index) => (
                     <div
                         key={index}
                         id={index + ""}
@@ -83,9 +82,9 @@ const StoriesContent = ({ count, setCount }: StoriesContentType) => {
                         }}
                         onClick={() => setCount(index)}
                         className={`${index === count ? "w-[24em] h-[92vh]" : "w-[14em] h-[52vh]"
-                            } bg-[#282828] rounded-2xl transition-all duration-500 ease-in-out flex-shrink-0`}
+                            } bg-[#282828] flex justify-center items-center rounded-2xl transition-all duration-500 ease-in-out flex-shrink-0`}
                     >
-                        <p>{index}{route}</p>
+                        <p className="text-[#E8174B]">{content}</p>
                     </div>
                 ))}
             </div>
