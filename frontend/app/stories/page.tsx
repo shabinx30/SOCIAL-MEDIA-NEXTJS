@@ -75,7 +75,7 @@ const StoriesContent = () => {
                     currentScrollLeft: container.scrollLeft,
                 });
             }
-        }, 400); // After transition (350ms) + buffer
+        }, 500); // After transition (350ms) + buffer
     };
 
     const handleNext = () => {
@@ -111,6 +111,8 @@ const StoriesContent = () => {
 
     return (
         <div className="w-[100vw] h-[100vh] overflow-hidden relative">
+            <div className="absolute w-[30%] h-full z-10 bg-gradient-to-r from-black/50"></div>
+            <div className="absolute right-0 w-[30%] h-full z-10 bg-gradient-to-l from-black/50"></div>
             <div
                 ref={containerRef}
                 className="flex h-full md:px-[26%] lg:px-[37%] items-center gap-12 justify-start overflow-x-hidden scrollbar-hide whitespace-nowrap"
@@ -121,7 +123,7 @@ const StoriesContent = () => {
                         id={index + ""}
                         ref={(el) => { storyRefs.current[index] = el }}
                         onClick={() => setCount(index)}
-                        className={`${index === count ? "w-[24em] h-[92vh]" : "w-[14em] h-[52vh]"} bg-[#282828] relative flex justify-center items-center rounded-2xl transition-all duration-[350ms] ease-in-out flex-shrink-0`}
+                        className={`${index === count ? "w-[24em] h-[92vh] z-20" : "w-[14em] h-[52vh] z-0"} bg-[#282828] relative flex justify-center items-center rounded-2xl transition-all duration-[500ms] ease-in-out flex-shrink-0`}
                     >
                         <p className="text-[#E8174B]">{content}</p>
                     </div>
