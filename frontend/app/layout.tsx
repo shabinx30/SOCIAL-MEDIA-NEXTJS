@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: 'Instagram Clone',
     description: 'A social media platform for sharing photos and videos',
     // images: ['/path/to/image.jpg'],
-    url: './favicon.ico',
+    url: 'https://pixagram.tungstenz.online/',
   },
 };
 
