@@ -64,7 +64,7 @@ const StoriesContent = () => {
                     className="bg-transparent"
                 >
                     {[1, 2, 3, 4, 5, 6].map((val, index) => (
-                        <SwiperSlide className="">
+                        <SwiperSlide key={index} className="">
                             <div
                                 className={`w-full h-[92vh] bg-[#282828] mx-auto flex justify-center items-center rounded-2xl flex-shrink-0`}
                             >
