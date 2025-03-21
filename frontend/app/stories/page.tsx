@@ -3,6 +3,14 @@
 import { Suspense, useRef, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { GrFormPrevious, GrFormNext } from "react-icons/gr";
+
+import { EffectCoverflow, Mousewheel, Keyboard } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+
+import "swiper/css"
+import "swiper/css/effect-coverflow"
+
 import MobileStory from '../components/stories/MobileStory'
 
 const Stories = () => {
@@ -16,9 +24,7 @@ const Stories = () => {
 const StoriesContent = () => {
     const router = useRouter();
     const searchParams = useSearchParams();
-    const arr = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
-    const storyRefs = useRef<(HTMLDivElement | null)[]>([]);
-    const containerRef = useRef<HTMLDivElement>(null);
+    
 
     const [count, setCount] = useState(() => {
         const id = searchParams.get("id");
@@ -30,89 +36,13 @@ const StoriesContent = () => {
         if (currentId !== String(count)) {
             router.push(`?id=${count}`, { scroll: false });
         }
-        scrollToStory(count);
     }, [count, router, searchParams]);
 
-    const scrollToStory = (index: number) => {
-        const container = containerRef.current;
-        if (!container) return;
-
-        const containerWidth = container.offsetWidth;
-        const activeWidth = 24 * 16; // 384px
-        const inactiveWidth = 14 * 16; // 224px
-        const gap = 48; // 3rem = 48px
-        const paddingLeft = parseFloat(getComputedStyle(container).paddingLeft);
-        const maxScroll = container.scrollWidth - containerWidth;
-
-        // Final offsetLeft when story at index is active
-        const finalOffsetLeft = paddingLeft + index * (inactiveWidth + gap);
-        const scrollPosition = finalOffsetLeft - (containerWidth - activeWidth) / 2;
-        const clampedScroll = Math.max(0, Math.min(scrollPosition, maxScroll));
-
-        console.log({
-            index,
-            paddingLeft,
-            finalOffsetLeft,
-            containerWidth,
-            scrollPosition,
-            clampedScroll,
-            maxScroll,
-        });
-
-        container.scrollTo({
-            left: clampedScroll,
-            behavior: "smooth", // Try "auto" first to eliminate animation conflict
-        });
-
-        // Debug: Check actual position after transition
-        setTimeout(() => {
-            const story = storyRefs.current[index];
-            if (story) {
-                const actualOffsetLeft = story.offsetLeft;
-                const actualScrollShouldBe = actualOffsetLeft - (containerWidth - activeWidth) / 2;
-                console.log({
-                    actualOffsetLeft,
-                    actualScrollShouldBe,
-                    currentScrollLeft: container.scrollLeft,
-                });
-            }
-        }, 500); // After transition (350ms) + buffer
-    };
-
-    const handleNext = () => {
-        if (count < arr.length - 1) {
-            const nextIndex = count + 1;
-            setCount(nextIndex);
-        }
-    };
-
-    const handlePrev = () => {
-        if (count > 0) {
-            const prevIndex = count - 1;
-            setCount(prevIndex);
-        }
-    };
-
-    useEffect(() => {
-        const handleKeyEvents = (e: KeyboardEvent) => {
-            switch (e.key) {
-                case "ArrowLeft":
-                case "ArrowUp":
-                    handlePrev();
-                    break;
-                case "ArrowRight":
-                case "ArrowDown":
-                    handleNext();
-                    break;
-            }
-        };
-        window.addEventListener("keydown", handleKeyEvents);
-        return () => window.removeEventListener("keydown", handleKeyEvents);
-    }, [count]);
+    
 
     return (
         <>
-            <div className="hidden md:block w-[100vw] h-[100vh] overflow-hidden relative">
+            {/* <div className="hidden md:block w-[100vw] h-[100vh] overflow-hidden relative">
                 <div className="absolute w-[30%] h-full z-10 bg-gradient-to-r from-black/50"></div>
                 <div className="absolute right-0 w-[30%] h-full z-10 bg-gradient-to-l from-black/50"></div>
                 <div
@@ -145,8 +75,40 @@ const StoriesContent = () => {
                 >
                     <GrFormNext size={20} />
                 </button>
+            </div> */}
+            <div className="hidden md:flex w-[100vw] h-[100vh] justify-center items-center">
+                <Swiper
+                    effect={'coverflow'}
+                    spaceBetween={100}
+                    centeredSlides={true}
+                    slidesPerView={3}
+                    mousewheel={true}
+                    keyboard={{
+                        enabled:true,
+                    }}
+                    coverflowEffect={
+                        {
+                            rotate: 0,
+                            stretch: 0,
+                            depth: 100,
+                            modifier: 2.5,
+                        }
+                    }
+                    modules={[EffectCoverflow, Keyboard, Mousewheel]}
+                    className="bg-transparent"
+                >
+                    {[1, 2, 3, 4, 5, 6].map((val, index) => (
+                        <SwiperSlide className="">
+                            <div
+                                className={`w-full h-[92vh] bg-[#282828] mx-auto flex justify-center items-center rounded-2xl flex-shrink-0`}
+                            >
+                                <p className="text-[#E8174B]">{index}</p>
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
             </div>
-            <MobileStory/>
+            <MobileStory />
         </>
     );
 };
