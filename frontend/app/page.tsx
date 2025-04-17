@@ -73,7 +73,7 @@ const Home = () => {
 
     return (
         <>
-            <div className="md:hidden flex justify-between bg-white dark:bg-black w-full pt-2 pb-6 px-2">
+            <header className="md:hidden flex justify-between bg-white dark:bg-black w-full pt-2 pb-6 px-2">
                 <h2 className="select-none font-semibold text-[1.75rem] tracking-tight scale-x-90 scale-y-125 block md:hidden">
                     𝒫𝒾𝓍𝒶𝑔𝓇𝒶𝓂
                 </h2>
@@ -81,9 +81,9 @@ const Home = () => {
                     <FaRegHeart size={26} />
                     <RiMessengerLine size={28} />
                 </div>
-            </div>
+            </header>
             <div className="flex md:pt-6">
-                <div className="block w-full lg:w-[65%]">
+                <main className="block w-full lg:w-[65%]">
                     <div className="inline-block w-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide px-2">
                         {arr.map((id, index) => <Story key={index} id={index}/>)}
                     </div>
@@ -98,8 +98,8 @@ const Home = () => {
                         {/* Invisible Element for Observer */}
                         <div ref={observerRef} style={{ height: '10px' }} />
                     </div>
-                </div>
-                <div className={`hidden lg:block pt-3 w-[35%] ${isPop ? 'lg:pr-[2.5em] lg:pl-3.5' : 'px-6'}`}>
+                </main>
+                <aside className={`hidden lg:block pt-3 w-[35%] ${isPop ? 'lg:pr-[2.5em] lg:pl-3.5' : 'px-6'}`}>
                     <div className="flex justify-between">
                         <div className="flex gap-3">
                             <Image className="rounded-full" loading="lazy" src="/Images/profile.jpg" alt="profile" width={45} height={45} />
@@ -114,7 +114,7 @@ const Home = () => {
                         <p className="text-[#a1a1a1]">Suggested for you</p>
                         <p className="cursor-pointer">See All</p>
                     </div>
-                </div>
+                </aside>
             </div>
         </>
     );

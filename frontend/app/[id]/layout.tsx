@@ -52,15 +52,15 @@ const ProfileLayout = async ({ children, params }: { children: React.ReactNode; 
     return (
         <div className="profile-layout select-none">
             {/* Mobile header */}
-            <div className="fixed flex md:hidden w-full h-[3em] bg-white dark:bg-black border-b border-[#DBDBDB] dark:border-[#2e2e2e] justify-between items-center px-3">
+            <header className="fixed flex md:hidden w-full h-[3em] bg-white dark:bg-black border-b border-[#DBDBDB] dark:border-[#2e2e2e] justify-between items-center px-3">
                 <h1 className="font-bold text-xl">{id}</h1>
                 <div className="flex gap-6">
                     <Image className="dark:invert" src="https://cdn-icons-png.flaticon.com/512/10103/10103630.png" alt="create" width={26} height={22} />
                     <Image className="dark:invert" src="https://cdn-icons-png.flaticon.com/512/13894/13894991.png" alt="more" width={26} height={26} />
                 </div>
-            </div>
+            </header>
 
-            <div className="flex-1 pt-8 md:pt-0 md:px-[2em] lg:px-[4em]">
+            <main className="flex-1 pt-8 md:pt-0 md:px-[2em] lg:px-[4em]">
                 <div className="flex justify-evenly lg:justify-center gap-0 lg:gap-8 pt-[2.5em]">
                     {/* Profile picture */}
                     <div className="flex md:w-[160px] md:h-[160px]">
@@ -153,7 +153,7 @@ const ProfileLayout = async ({ children, params }: { children: React.ReactNode; 
                     <StoryCircle />
                     <StoryCircle isAdd={true} />
                 </div>
-            </div>
+            </main>
 
             {/* Profile tabs */}
             <ProfileTabs userId={id} />

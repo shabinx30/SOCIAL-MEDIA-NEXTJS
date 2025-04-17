@@ -47,7 +47,7 @@ const Sidebar = () => {
   return (
     <>
       {/* Sidebar */}
-      <nav className="fixed h-screen md:w-[4.5rem] lg:w-[15.3em] bg-white dark:bg-black hidden md:block border-r border-[#DBDBDB] dark:border-[#2e2e2e]">
+      <aside className="fixed h-screen md:w-[4.5rem] lg:w-[15.3em] bg-white dark:bg-black hidden md:block border-r border-[#DBDBDB] dark:border-[#2e2e2e]">
         <div className="relative h-[100vh]">
           <Link href={'/'}>
             <h2 className="select-none font-bold px-6 pt-9 text-[1.35rem] tracking-tight scale-x-90 scale-y-125 hidden lg:block">
@@ -175,7 +175,7 @@ const Sidebar = () => {
             }
           </AnimatePresence>
         </div>
-      </nav>
+      </aside>
 
       {/* Bottom Bar */}
       <nav className="fixed z-10 bottom-0 left-0 md:hidden w-full h-[3.5em] bg-white dark:bg-black border-t border-[#DBDBDB] dark:border-[#2e2e2e] py-3 px-6">
