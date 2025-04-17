@@ -27,9 +27,9 @@ export const metadata: Metadata = {
 };
 
 //cheking the route
-import RouteChecker from "./components/route_checker";
+import RouteChecker from "../components/route_checker";
 import AppProvider from "./context/AppContext";
-import PopUp from "./components/home/popup/PopUp";
+import PopUp from "../components/home/popup/PopUp";
 
 export default function RootLayout({
   children,

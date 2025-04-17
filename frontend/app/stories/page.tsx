@@ -11,7 +11,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css"
 import "swiper/css/effect-coverflow"
 
-import MobileStory from '../components/stories/MobileStory'
+import MobileStory from '../../components/stories/MobileStory'
 
 const Stories = () => {
     return (

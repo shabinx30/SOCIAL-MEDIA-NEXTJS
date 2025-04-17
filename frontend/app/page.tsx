@@ -4,7 +4,7 @@ import Image from "next/image";
 import dynamic from 'next/dynamic';
 import { useState, useEffect, useRef } from 'react';
 
-import "./components/home/media/media.css"
+import "../components/home/media/media.css"
 
 //icons
 import { FaRegHeart } from "react-icons/fa";
@@ -13,12 +13,12 @@ import { CgSpinner } from "react-icons/cg";
 
 
 // components
-import Story from "./components/home/story/Story";
+import Story from "../components/home/story/Story";
 import { useAppContext } from "./context/AppContext";
 import { mockPosts } from "./mockData"
 
 
-const Post = dynamic(() => import("./components/home/post/Post"), {
+const Post = dynamic(() => import("../components/home/post/Post"), {
     // loading: () => <p>Loading Posts...</p>,
     ssr: false // Important for client-only components
 });

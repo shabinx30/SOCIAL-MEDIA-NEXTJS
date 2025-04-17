@@ -1,4 +1,4 @@
-import ProfileTabs from "../components/profile/tabs";
+import ProfileTabs from "../../components/profile/tabs";
 import Link from "next/link";
 import Image from "next/image";
 

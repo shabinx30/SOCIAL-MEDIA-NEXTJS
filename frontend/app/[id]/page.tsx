@@ -1,12 +1,7 @@
-"use client"
 
-import { useState } from "react";
-//icons
 import { PiCameraLight } from "react-icons/pi";
 
 const PostsPage = () => {
-
-    const [count] = useState(Math.floor(Math.random() * 1000))
 
     const posts: object[] = []
 
@@ -24,7 +19,7 @@ const PostsPage = () => {
                         <p className="items-center text-sm pt-5">When you share photos, they will appear on your profile.</p>
                     </div>
                     <div className="flex justify-center items-center">
-                        <p className="items-center text-[#0095F6] pt-5">{count}</p>
+                        <p className="items-center text-[#0095F6] pt-5">Share your first photo</p>
                     </div>
                 </div>
             </div>
