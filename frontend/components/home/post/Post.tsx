@@ -1,6 +1,6 @@
 "use client"
 
-import { useAppContext } from "@/app/context/AppContext";
+import { useAppContext } from "@/context/AppContext";
 import Image from "next/image";
 import { useState } from "react";
 

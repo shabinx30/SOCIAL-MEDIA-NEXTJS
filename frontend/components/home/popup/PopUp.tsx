@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect } from 'react'
-import { useAppContext } from "@/app/context/AppContext"
+import { useAppContext } from "@/context/AppContext"
 import { AnimatePresence, motion } from 'framer-motion'
 
 

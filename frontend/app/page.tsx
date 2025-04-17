@@ -14,7 +14,7 @@ import { CgSpinner } from "react-icons/cg";
 
 // components
 import Story from "../components/home/story/Story";
-import { useAppContext } from "./context/AppContext";
+import { useAppContext } from "../context/AppContext";
 import { mockPosts } from "./mockData"
 
 
