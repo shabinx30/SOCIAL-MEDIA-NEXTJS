@@ -15,7 +15,7 @@ import { CgSpinner } from "react-icons/cg";
 // components
 import Story from "../components/home/story/Story";
 import { useAppContext } from "../context/AppContext";
-import { mockPosts } from "./mockData"
+import { mockPosts } from "../lib/mockData"
 
 
 const Post = dynamic(() => import("../components/home/post/Post"), {
