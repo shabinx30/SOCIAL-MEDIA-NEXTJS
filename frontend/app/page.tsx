@@ -102,7 +102,7 @@ const Home = () => {
                 <div className={`hidden lg:block pt-3 w-[35%] ${isPop ? 'lg:pr-[2.5em] lg:pl-3.5' : 'px-6'}`}>
                     <div className="flex justify-between">
                         <div className="flex gap-3">
-                            <Image className="rounded-full" loading="lazy" src="https://instagram.fcok3-2.fna.fbcdn.net/v/t51.2885-19/476501464_1523240058345855_3565333406899966342_n.jpg?_nc_ht=instagram.fcok3-2.fna.fbcdn.net&_nc_cat=103&_nc_oc=Q6cZ2AHku2GBAwVT0RJbW0qNB0e9Klc1URYJa7oUdN5mH68D-1X9yPAw8CAF0DxQkOjFYgKyNt7htnmgrYd6BhVPvZQV&_nc_ohc=y1eTcK4XTocQ7kNvgG1yK3c&_nc_gid=10bd902f436144a48546adeab947251b&edm=ALGbJPMBAAAA&ccb=7-5&oh=00_AYGizs5U10YpANF8aSXUKVdGSIUR99TVSZZrClFcX-j-Lw&oe=67D64B9A&_nc_sid=7d3ac5" alt="profile" width={45} height={45} />
+                            <Image className="rounded-full" loading="lazy" src="/Images/profile.jpg" alt="profile" width={45} height={45} />
                             <div>
                                 <p className="text-sm font-semibold">shabinsharih</p>
                                 <p className="text-[#a1a1a1] text-sm">SHABIN</p>
