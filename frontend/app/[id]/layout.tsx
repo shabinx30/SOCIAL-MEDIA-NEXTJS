@@ -61,7 +61,7 @@ const ProfileLayout = async ({ children, params }: { children: React.ReactNode; 
             </header>
 
             <main className="flex-1 pt-8 md:pt-0 md:px-[2em] lg:px-[4em]">
-                <div className="flex justify-evenly lg:justify-center gap-0 lg:gap-8 pt-[2.5em]">
+                <section className="flex justify-evenly lg:justify-center gap-0 lg:gap-8 pt-[2.5em]">
                     {/* Profile picture */}
                     <div className="flex md:w-[160px] md:h-[160px]">
                         <Image
@@ -124,10 +124,10 @@ const ProfileLayout = async ({ children, params }: { children: React.ReactNode; 
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
 
                 {/* Mobile bio section */}
-                <div className="pt-8 px-4 block md:hidden gap-0">
+                <section className="pt-8 px-4 block md:hidden gap-0">
                     <p>{profileData.bio}</p>
                     <div className="flex text-[#00376B] dark:text-[#E0E2EF]">
                         <RiLinkM size={16} className="my-auto mr-1" />
@@ -139,7 +139,7 @@ const ProfileLayout = async ({ children, params }: { children: React.ReactNode; 
                             {profileData.website.replace('https://', '')}
                         </Link>
                     </div>
-                </div>
+                </section>
 
                 {/* Mobile buttons */}
                 <div className="flex md:hidden duration-300 w-full px-4 pt-4">
@@ -148,18 +148,18 @@ const ProfileLayout = async ({ children, params }: { children: React.ReactNode; 
                 </div>
 
                 {/* Stories section */}
-                <div className="flex pt-[2em] md:pt-[3em] px-[1em] md:px-[8em] justify-start gap-6 md:gap-10">
+                <section className="flex pt-[2em] md:pt-[3em] px-[1em] md:px-[8em] justify-start gap-6 md:gap-10">
                     <StoryCircle />
                     <StoryCircle />
                     <StoryCircle isAdd={true} />
-                </div>
+                </section>
             </main>
 
             {/* Profile tabs */}
             <ProfileTabs userId={id} />
 
             {/* Content area */}
-            <div className="md:mr-[2em] lg:mr-[8em] lg:ml-[6em]">{children}</div>
+            <section className="md:mr-[2em] lg:mr-[8em] lg:ml-[6em]">{children}</section>
         </div>
     );
 }

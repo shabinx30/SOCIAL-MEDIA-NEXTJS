@@ -84,10 +84,10 @@ const Home = () => {
             </header>
             <div className="flex md:pt-6">
                 <main className="block w-full lg:w-[65%]">
-                    <div className="inline-block w-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide px-2">
+                    <section className="inline-block w-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide px-2">
                         {arr.map((id, index) => <Story key={index} id={index}/>)}
-                    </div>
-                    <div>
+                    </section>
+                    <section>
                         {posts.map((_, index) => (
                             <Post key={index} />
                         ))}
@@ -97,7 +97,7 @@ const Home = () => {
 
                         {/* Invisible Element for Observer */}
                         <div ref={observerRef} style={{ height: '10px' }} />
-                    </div>
+                    </section>
                 </main>
                 <aside className={`hidden lg:block pt-3 w-[35%] ${isPop ? 'lg:pr-[2.5em] lg:pl-3.5' : 'px-6'}`}>
                     <div className="flex justify-between">
