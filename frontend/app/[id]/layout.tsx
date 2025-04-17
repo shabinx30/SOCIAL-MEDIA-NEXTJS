@@ -26,7 +26,7 @@ const ProfileLayout = async ({ children, params }: { children: React.ReactNode; 
         posts: 16,
         followers: "743M",
         following: 1214,
-        profileImage: "https://instagram.fcok4-1.fna.fbcdn.net/v/t51.2885-19/476501464_1523240058345855_3565333406899966342_n.jpg?_nc_ht=instagram.fcok4-1.fna.fbcdn.net&_nc_cat=103&_nc_oc=Q6cZ2AFmAvuVSWABIM48hyQJuLl-08cjUxkMUjPOwtHH0v8YPQs6epqPJdaewSg-KuQeHdQ&_nc_ohc=mCOxKKMrIaUQ7kNvgHfSSVI&_nc_gid=af8b59559ba54a58a9cb6cbc866ffde9&edm=ALGbJPMBAAAA&ccb=7-5&oh=00_AYBP21YcMLjgWjR9oT1Agodt3dZ-r0Lngl4B_Y81inoRLA&oe=67CCA09A&_nc_sid=7d3ac5"
+        // profileImage: "../../public/Images/profile.jpg"
     };
 
     // button style
@@ -66,7 +66,7 @@ const ProfileLayout = async ({ children, params }: { children: React.ReactNode; 
                     <div className="flex md:w-[160px] md:h-[160px]">
                         <Image
                             className="cursor-pointer md:w-full md:h-full rounded-full duration-300"
-                            src={profileData.profileImage}
+                            src='/Images/profile.jpg'
                             alt="profile picture"
                             width={100}
                             height={100}
