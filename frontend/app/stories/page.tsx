@@ -1,8 +1,6 @@
 "use client";
 
 import { Suspense } from "react";
-// import { useRouter, useSearchParams } from "next/navigation";
-// import { GrFormPrevious, GrFormNext } from "react-icons/gr";
 
 import { EffectCoverflow, Mousewheel, Keyboard } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -22,27 +20,10 @@ const Stories = () => {
 };
 
 const StoriesContent = () => {
-    // const router = useRouter();
-    // const searchParams = useSearchParams();
-    
-
-    // const [count, setCount] = useState(() => {
-    //     const id = searchParams.get("id");
-    //     return id ? Number(id) : 0;
-    // });
-
-    // useEffect(() => {
-    //     const currentId = searchParams.get("id");
-    //     if (currentId !== String(count)) {
-    //         router.push(`?id=${count}`, { scroll: false });
-    //     }
-    // }, [count, router, searchParams]);
-
-    
 
     return (
         <>
-            <div className="hidden md:flex w-[100vw] h-[100vh] justify-center items-center">
+            <main className="hidden md:flex w-[100vw] h-[100vh] justify-center items-center">
                 <Swiper
                     effect={'coverflow'}
                     spaceBetween={100}
@@ -73,7 +54,7 @@ const StoriesContent = () => {
                         </SwiperSlide>
                     ))}
                 </Swiper>
-            </div>
+            </main>
             <MobileStory />
         </>
     );
