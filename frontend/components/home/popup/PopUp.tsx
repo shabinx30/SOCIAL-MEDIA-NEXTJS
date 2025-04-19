@@ -39,19 +39,19 @@ const PopBg = () => {
                         onClick={(e) => e.stopPropagation()}
                     >
                         <div className='flex justify-center py-3.5 cursor-pointer hover:bg-[#c8c8c8] dark:hover:bg-[#202020] rounded-t-3xl font-semibold duration-300 text-sm text-red-500'>Report</div>
-                        <hr className="border-t-2 border-[#c8c8c8] dark:border-[#2f2f2f]" />
+                        <hr className="border-t border-[#c8c8c8] dark:border-[#2f2f2f]" />
                         <div className='flex justify-center py-3.5 cursor-pointer hover:bg-[#c8c8c8] dark:hover:bg-[#202020] duration-300 font-semibold text-sm text-[#0095F6]'>Follow</div>
-                        <hr className="border-t-2 border-[#c8c8c8] dark:border-[#2f2f2f]" />
+                        <hr className="border-t border-[#c8c8c8] dark:border-[#2f2f2f]" />
                         <div className='flex justify-center py-3.5 cursor-pointer hover:bg-[#c8c8c8] dark:hover:bg-[#202020] duration-300 text-sm'>Add to favorite</div>
-                        <hr className="border-t-2 border-[#c8c8c8] dark:border-[#2f2f2f]" />
+                        <hr className="border-t border-[#c8c8c8] dark:border-[#2f2f2f]" />
                         <div className='flex justify-center py-3.5 cursor-pointer hover:bg-[#c8c8c8] dark:hover:bg-[#202020] duration-300 text-sm'>Go to post</div>
-                        <hr className="border-t-2 border-[#c8c8c8] dark:border-[#2f2f2f]" />
+                        <hr className="border-t border-[#c8c8c8] dark:border-[#2f2f2f]" />
                         <div className='flex justify-center py-3.5 cursor-pointer hover:bg-[#c8c8c8] dark:hover:bg-[#202020] duration-300 text-sm'>Share to...</div>
-                        <hr className="border-t-2 border-[#c8c8c8] dark:border-[#2f2f2f]" />
+                        <hr className="border-t border-[#c8c8c8] dark:border-[#2f2f2f]" />
                         <div className='flex justify-center py-3.5 cursor-pointer hover:bg-[#c8c8c8] dark:hover:bg-[#202020] duration-300 text-sm'>Copy link</div>
-                        <hr className="border-t-2 border-[#c8c8c8] dark:border-[#2f2f2f]" />
+                        <hr className="border-t border-[#c8c8c8] dark:border-[#2f2f2f]" />
                         <div className='flex justify-center py-3.5 cursor-pointer hover:bg-[#c8c8c8] dark:hover:bg-[#202020] duration-300 text-sm'>About this account</div>
-                        <hr className="border-t-2 border-[#c8c8c8] dark:border-[#2f2f2f]" />
+                        <hr className="border-t border-[#c8c8c8] dark:border-[#2f2f2f]" />
                         <div onClick={() => setPop(false)} className='flex justify-center py-3.5 cursor-pointer hover:bg-[#c8c8c8] dark:hover:bg-[#202020] rounded-b-3xl duration-300 text-sm'>Cancel</div>
                     </motion.div>
                 </motion.div>
