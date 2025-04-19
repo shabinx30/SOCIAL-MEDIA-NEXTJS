@@ -28,7 +28,7 @@ const PostsPage = () => {
         return (
             <div className="grid grid-cols-3 w-full gap-1 pt-[0.5em] pb-[6em]">
                 {posts.map((val, index) => (
-                    <div key={index} className="bg-[#2B2B2B] w-full relative aspect-square"></div>
+                    <div onContextMenu={(e) => e.preventDefault()} key={index} className="bg-[#2B2B2B] w-full relative aspect-square"></div>
                 ))}
             </div>
         )

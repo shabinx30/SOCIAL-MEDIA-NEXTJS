@@ -39,7 +39,7 @@ const Media = ({ animateLike }: {animateLike: () => void}) => {
 
     return (
         <>
-            <div className="w-full h-[30em] flex items-center justify-center bg-[#c8c8c8] dark:bg-[#282828] md:rounded-md mt-2"
+            <div onContextMenu={(e) => e.preventDefault()} className="w-full h-[30em] flex items-center justify-center bg-[#c8c8c8] dark:bg-[#282828] md:rounded-md mt-2"
                 onDoubleClick={showLike}
             >
                 {/* image */}
