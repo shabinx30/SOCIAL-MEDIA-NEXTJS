@@ -39,7 +39,7 @@ const Post = () => {
                         </Link>
                         <div className="block">
                             <Link href={'/shabinsharih'}>
-                                <p className="font-semibold text-[0.85em] cursor-pointer">shabinsharih {" • "}<span className="text-[#a1a1a1] text-[0.75em] cursor-default">48m</span></p>
+                                <p className="font-semibold text-[0.85em] cursor-pointer">shabinsharih{" • "}<span className="text-[#a1a1a1] text-[0.75em] cursor-default">48m</span></p>
                             </Link>
                             <p className="text-sm">♪ music</p>
                         </div>

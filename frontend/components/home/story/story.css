@@ -1,3 +1,13 @@
+:root {
+  --strbg: white
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --strbg: black
+  }
+}
+
 /* Animation for expanding */
 @keyframes expandFromOrigin {
   0% {
@@ -8,7 +18,7 @@
   100% {
     transform: scale(1);
     border-radius: 0;
-    background-color: #1A1A1A;
+    background-color: var(--strbg);
   }
 }
 
