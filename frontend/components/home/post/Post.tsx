@@ -33,13 +33,13 @@ const Post = () => {
         <div className={`flex justify-center ${isPop ? 'lg:pr-[0.6em]' : ''}`}>
             <div className="pt-6 w-[30em]">
                 <div className="flex justify-between items-center pl-4 pr-2.5">
-                    <div className="flex gap-2">
+                    <div className="flex gap-2 leading-[1]">
                         <Link href={'/shabinsharih'}>
-                            <Image className="rounded-full my-0.5 cursor-pointer" loading="lazy" src="/Images/profile.jpg" alt="profile" width={36} height={36} />
+                            <Image className="rounded-full cursor-pointer" loading="lazy" src="/Images/profile.jpg" alt="profile" width={32} height={32} />
                         </Link>
                         <div className="block">
                             <Link href={'/shabinsharih'}>
-                                <p className="font-semibold text-sm cursor-pointer">shabinsharih <span className="text-[#a1a1a1] text-xs font-light cursor-default">{" • "} 48m</span></p>
+                                <p className="font-semibold text-[0.85em] cursor-pointer">shabinsharih {" • "}<span className="text-[#a1a1a1] text-[0.75em] cursor-default">48m</span></p>
                             </Link>
                             <p className="text-sm">♪ music</p>
                         </div>
