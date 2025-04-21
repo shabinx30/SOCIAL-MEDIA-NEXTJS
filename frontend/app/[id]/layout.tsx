@@ -16,7 +16,7 @@ export async function generateStaticParams() {
 export const revalidate = 10;
 
 const ProfileLayout = async ({ children, params }: { children: React.ReactNode; params: { id: string } }) => {
-    const { id } = params;
+    const { id } = await params;
     
     
     const profileData = {

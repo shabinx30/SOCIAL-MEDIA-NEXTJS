@@ -41,20 +41,15 @@ const Post = () => {
                             <Link href={'/shabinsharih'}>
                                 <p className="font-semibold text-[0.85em] cursor-pointer">shabinsharih{" • "}<span className="text-[#a1a1a1] text-[0.75em] cursor-default select-none">48m</span></p>
                             </Link>
-                            <p className="text-sm">♪ music</p>
+                            <p className="text-sm cursor-pointer">♪ music</p>
                         </div>
                     </div>
                     <div className="flex gap-3 h-[2em] select-none">
 
                         {/* follow & unfollow */}
-                        {isFollow ? 
-                        (<button onClick={() => setFollow(false)} className="px-5 py-1 bg-[#efefef] hover:bg-[#DBDBDB] dark:bg-[#333333] rounded-lg dark:hover:bg-[#262626] text-sm duration-150">
-                            Following
-                        </button>) 
-                            : 
-                        (<button onClick={() => setFollow(true)} className="px-5 py-1 bg-[#efefef] hover:bg-[#DBDBDB] dark:bg-[#333333] rounded-lg dark:hover:bg-[#262626] text-sm duration-150">
-                            Follow
-                        </button>)}
+                        <button onClick={() => setFollow(!isFollow)} className="px-5 py-1 bg-[#efefef] hover:bg-[#DBDBDB] dark:bg-[#333333] rounded-lg dark:hover:bg-[#262626] text-sm duration-150">
+                            {isFollow ? 'Following' : 'Follow'}
+                        </button>
 
                         {/* more button */}
                         <MdMoreVert
