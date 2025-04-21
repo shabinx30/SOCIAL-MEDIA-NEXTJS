@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import dynamic from 'next/dynamic';
+import Link from "next/link";
 import { useState, useEffect, useRef } from 'react';
 
 import "../components/home/media/media.css"
@@ -78,14 +79,14 @@ const Home = () => {
                     𝒫𝒾𝓍𝒶𝑔𝓇𝒶𝓂
                 </h2>
                 <div className="flex gap-6 pt-2 pr-2">
-                    <FaRegHeart size={26} />
-                    <RiMessengerLine size={28} />
+                    <Link href={'/notifications'}><FaRegHeart size={26} /></Link>
+                    <Link href={'/messages'}><RiMessengerLine size={28} /></Link>
                 </div>
             </header>
             <div className="flex md:pt-6">
                 <main className="block w-full lg:w-[65%]">
                     <section className="inline-block w-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide px-2">
-                        {arr.map((id, index) => <Story key={index} id={index}/>)}
+                        {arr.map((_, index) => <Story key={index} id={index}/>)}
                     </section>
                     <section>
                         {posts.map((_, index) => (
