@@ -97,7 +97,7 @@ const Home = () => {
                         {loading && <div className="flex justify-center py-[5em]"><CgSpinner size={30} className="animate-spin"/></div>}
 
                         {/* Invisible Element for Observer */}
-                        <div ref={observerRef} style={{ height: '10px' }} />
+                        <div ref={observerRef} style={{ height: '1em' }} />
                     </section>
                 </main>
                 <aside className={`hidden lg:block pt-3 w-[35%] ${isPop ? 'lg:pr-[2.5em] lg:pl-3.5' : 'px-6'}`}>

@@ -25,8 +25,7 @@ const ProfileLayout = async ({ children, params }: { children: React.ReactNode; 
         website: "https://shabeensharih.com",
         posts: 16,
         followers: "743M",
-        following: 1214,
-        // profileImage: "../../public/Images/profile.jpg"
+        following: 1214
     };
 
     // button style
