@@ -1,120 +1,174 @@
-"use client"
+"use client";
 
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from "react";
 import "./MobileStory.css";
+
+interface strType {
+    data: string;
+}
 
 const CubeComponent = () => {
     const cubeRef = useRef<HTMLDivElement>(null);
     const currentAngleRef = useRef(0);
-    const persRef = useRef<HTMLDivElement>(null)
-
+    const persRef = useRef<HTMLDivElement>(null);
 
     // story viewing logic
-    const stories = ['story 1', 'story 2', 'story 3', 'story 4', 'story 5', 'story 6', 'story 7']
-    const [front, setFront] = useState<number>(0)
-    const [right, setRight] = useState<number>(1)
-    const [back, setBack] = useState<number>(2)
-    const [left, setLeft] = useState<number>(3)
-    const faces = [setFront, setRight, setBack, setLeft, setFront, setRight, setBack]
-    const [currStr, setCurrStr] = useState<number>(0)
-
+    const stories: strType[][] = [
+        [
+            { data: "profile 1 story 1" },
+            { data: "profile 1 story 2" },
+        ],
+        [{ data: "profile 2 story 1" }],
+        [
+            { data: "profile 3 story 1" },
+            { data: "profile 3 story 2" },
+        ],
+        [
+            { data: "profile 4 story 1" },
+            { data: "profile 4 story 2" },
+        ],
+        [
+            { data: "profile 5 story 1" },
+            { data: "profile 5 story 2" },
+        ],
+    ];
+    const [front, setFront] = useState<number>(0);
+    const [right, setRight] = useState<number>(1);
+    const [back, setBack] = useState<number>(2);
+    const [left, setLeft] = useState<number>(3);
+    const faces = [
+        setFront,
+        setRight,
+        setBack,
+        setLeft,
+        setFront,
+        setRight,
+        setBack,
+    ];
+    const [currPro, setCurrPro] = useState<number>(0);
+    const [currStr, setCurrStr] = useState<number>(0);
 
     const updateBack = (direction: number) => {
-        // setLog('function called')
         if (direction > 0) {
-            setCurrStr((pstr) => {
-                //prevent going next from the last story
-                if (pstr == stories.length - 1) return pstr;
-                //updating the back side of the cube to next
-                if (pstr >= 2 && pstr + 2 < stories.length) {
-                    faces[pstr + 2](pstr + 2);
+            setCurrPro((pPro) => {
+                if (pPro >= stories.length - 1) return pPro;
+                if (pPro >= 2 && pPro + 2 < stories.length) {
+                    faces[pPro + 2](pPro + 2);
                 }
-                //track the current story
-                return pstr + 1;
+                return pPro + 1;
             });
+            setCurrStr(0);
         } else {
-            setCurrStr((pstr) => {
-                //prevent going back from 1st story
-                if (pstr === 0) return pstr;
-                //updating the back side of the cube to prev
-                if (pstr >= 2 && pstr - 2 >= 0) {
-                    faces[pstr - 2](pstr - 2);
+            setCurrPro((pPro) => {
+                if (pPro === 0) return pPro;
+                if (pPro >= 2 && pPro - 2 >= 0) {
+                    faces[pPro - 2](pPro - 2);
                 }
-                //track the current story
-                return pstr - 1;
+                return pPro - 1;
             });
+            setCurrStr(0);
         }
     };
 
     const next = () => {
-        if (cubeRef.current) {
-
-            //prevent going next from the last story
-            if (currStr == (stories.length - 1)) {
-                return
+        if (currStr < stories[currPro].length - 1) {
+            setCurrStr((p) => p + 1);
+        } else if (cubeRef.current) {
+            if (currPro >= stories.length - 1) {
+                return;
             }
-            //rotating the cube
             currentAngleRef.current -= 90;
             cubeRef.current.style.transform = `rotateY(${currentAngleRef.current}deg)`;
             if (persRef.current) {
                 persRef.current.style.transform = `translateZ(${-21}vw)`;
                 setTimeout(() => {
                     if (persRef.current) {
-                        persRef.current.style.transform = `translateZ(${0}vw)`
+                        persRef.current.style.transform = `translateZ(${0}vw)`;
                     }
-                }, 200)
+                }, 200);
             }
-            updateBack(1)
+            updateBack(1);
         }
     };
 
     const prev = () => {
-        if (cubeRef.current) {
-
-            //prevent going back from 1st story
-            if (currStr === 0) {
-                return
+        if (currStr > 0) {
+            setCurrStr((p) => p - 1);
+        } else if (cubeRef.current) {
+            if (currPro === 0) {
+                return;
             }
-            //rotating the cube
             currentAngleRef.current += 90;
             cubeRef.current.style.transform = `rotateY(${currentAngleRef.current}deg)`;
             if (persRef.current) {
                 persRef.current.style.transform = `translateZ(${-21}vw)`;
                 setTimeout(() => {
                     if (persRef.current) {
-                        persRef.current.style.transform = `translateZ(${0}vw)`
+                        persRef.current.style.transform = `translateZ(${0}vw)`;
                     }
-                }, 200)
+                }, 200);
             }
-            updateBack(-1)
+            updateBack(-1);
         }
     };
 
+    useEffect(() => {
+        console.log("currPro:", currPro, "currStr:", currStr);
+    }, [currPro, currStr]);
+
+    // Helper function to get a valid story index for a given profile
+    const getValidStoryIndex = (profileIndex: number, storyIndex: number) => {
+        return Math.min(storyIndex, stories[profileIndex].length - 1);
+    };
 
     return (
         <main className="container block md:hidden">
-            <div className='pers' ref={persRef}>
-                <p className='fixed text-white'>curr: {currStr}</p>
+            <div className="pers" ref={persRef}>
+                <p className="fixed text-white">curr: {currPro}</p>
                 <div className="cube" ref={cubeRef}>
                     <section className="face front">
-                        <div onClick={prev} style={{ backgroundColor: 'rgba(255,0,0,0.3)' }}></div>
-                        <div>{stories[front]}</div>
-                        <div onClick={next} style={{ backgroundColor: 'rgba(0,255,0,0.3)' }}></div>
+                        <div
+                            onClick={prev}
+                            style={{ backgroundColor: "rgba(255,0,0,0.3)" }}
+                        ></div>
+                        <div>{stories[front][getValidStoryIndex(front, currStr)].data}</div>
+                        <div
+                            onClick={next}
+                            style={{ backgroundColor: "rgba(0,255,0,0.3)" }}
+                        ></div>
                     </section>
                     <section className="face right">
-                        <div onClick={prev} style={{ backgroundColor: 'rgba(255,0,0,0.3)' }}></div>
-                        <div>{stories[right]}</div>
-                        <div onClick={next} style={{ backgroundColor: 'rgba(0,255,0,0.3)' }}></div>
+                        <div
+                            onClick={prev}
+                            style={{ backgroundColor: "rgba(255,0,0,0.3)" }}
+                        ></div>
+                        <div>{stories[right][getValidStoryIndex(right, currStr)].data}</div>
+                        <div
+                            onClick={next}
+                            style={{ backgroundColor: "rgba(0,255,0,0.3)" }}
+                        ></div>
                     </section>
                     <section className="face back">
-                        <div onClick={prev} style={{ backgroundColor: 'rgba(255,0,0,0.3)' }}></div>
-                        <div>{stories[back]}</div>
-                        <div onClick={next} style={{ backgroundColor: 'rgba(0,255,0,0.3)' }}></div>
+                        <div
+                            onClick={prev}
+                            style={{ backgroundColor: "rgba(255,0,0,0.3)" }}
+                        ></div>
+                        <div>{stories[back][getValidStoryIndex(back, currStr)].data}</div>
+                        <div
+                            onClick={next}
+                            style={{ backgroundColor: "rgba(0,255,0,0.3)" }}
+                        ></div>
                     </section>
                     <section className="face left">
-                        <div onClick={prev} style={{ backgroundColor: 'rgba(255,0,0,0.3)' }}></div>
-                        <div>{stories[left]}</div>
-                        <div onClick={next} style={{ backgroundColor: 'rgba(0,255,0,0.3)' }}></div>
+                        <div
+                            onClick={prev}
+                            style={{ backgroundColor: "rgba(255,0,0,0.3)" }}
+                        ></div>
+                        <div>{stories[left][getValidStoryIndex(left, currStr)].data}</div>
+                        <div
+                            onClick={next}
+                            style={{ backgroundColor: "rgba(0,255,0,0.3)" }}
+                        ></div>
                     </section>
                 </div>
             </div>
