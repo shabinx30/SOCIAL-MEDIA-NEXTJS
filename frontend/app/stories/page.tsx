@@ -45,7 +45,7 @@ const StoriesContent = () => {
             <main className="hidden md:flex w-[100vw] h-[100vh] justify-center items-center">
                 <ul className="stories h-full w-[50%]">
                     {new Array(10).fill(1).map((_,i) => (
-                        <li className="story">
+                        <li key={i} className="story">
                             <div className="flex justify-center items-center w-[25em] h-full">
                                 {i}
                             </div>
