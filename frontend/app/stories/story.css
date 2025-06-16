@@ -1,0 +1,23 @@
+.stories {
+    overflow-x: auto;
+    scrollbar-width: none;
+    display: flex;
+    gap: 1em;
+    padding: 2em 16em;
+    scroll-snap-type: x mandatory;
+    /* scroll-padding-inline: 10em; */
+}
+
+.story {
+    background: #3d3d3d;
+    scroll-snap-align: center;
+    transform: scale(0.8);
+    opacity: 0.5;
+    transition: transform 0.3s linear, opacity 0.3s linear;
+    border-radius: 20px;
+}
+
+.story.active {
+    transform: scale(1);
+    opacity: 1;
+}

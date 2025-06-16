@@ -1,15 +1,9 @@
 "use client";
 
-import { Suspense } from "react";
+import { Suspense, useEffect } from "react";
+import "./story.css"
 
-import { EffectCoverflow, Mousewheel, Keyboard } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-
-
-import "swiper/css"
-import "swiper/css/effect-coverflow"
-
-import MobileStory from '../../components/stories/MobileStory'
+import MobileStory from "../../components/stories/MobileStory";
 
 const Stories = () => {
     return (
@@ -20,40 +14,44 @@ const Stories = () => {
 };
 
 const StoriesContent = () => {
+    useEffect(() => {
+        const stories = document.querySelectorAll(".story");
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                    } else {
+                        entry.target.classList.remove("active");
+                    }
+                });
+            },
+            {
+                root: document.querySelector(".stories"),
+                threshold: 0.75,
+            }
+        );
+
+        stories.forEach((story) => observer.observe(story));
+
+        return () => {
+            stories.forEach((story) => observer.unobserve(story));
+        };
+    }, []);
 
     return (
         <>
             <main className="hidden md:flex w-[100vw] h-[100vh] justify-center items-center">
-                <Swiper
-                    effect={'coverflow'}
-                    spaceBetween={100}
-                    centeredSlides={true}
-                    slidesPerView={3}
-                    mousewheel={true}
-                    keyboard={{
-                        enabled:true,
-                    }}
-                    coverflowEffect={
-                        {
-                            rotate: 0,
-                            stretch: 0,
-                            depth: 100,
-                            modifier: 2.5,
-                        }
-                    }
-                    modules={[EffectCoverflow, Keyboard, Mousewheel]}
-                    className="bg-transparent"
-                >
-                    {[1, 2, 3, 4, 5, 6].map((val, index) => (
-                        <SwiperSlide key={index} className="">
-                            <div
-                                className={`w-full h-[92vh] bg-[#282828] mx-auto flex justify-center items-center rounded-2xl flex-shrink-0`}
-                            >
-                                <p className="text-[#E8174B]">{index}</p>
+                <ul className="stories h-full w-[50%]">
+                    {new Array(10).fill(1).map((_,i) => (
+                        <li className="story">
+                            <div className="flex justify-center items-center w-[25em] h-full">
+                                {i}
                             </div>
-                        </SwiperSlide>
+                        </li>
                     ))}
-                </Swiper>
+                </ul>
             </main>
             <MobileStory />
         </>
